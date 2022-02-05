@@ -1,0 +1,20 @@
+import { Heading, SimpleGrid } from "@chakra-ui/react";
+import React from "react";
+import DataTools from "../../data/DataTools";
+import ItemTool from "./ItemTool";
+
+const index = () => {
+  return (
+    <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} spacing={5}>
+      {DataTools.map((itemTool) => (
+        <ItemTool
+          key={itemTool.name}
+          IconValue={itemTool.IconValue}
+          name={itemTool.name}
+        />
+      ))}
+    </SimpleGrid>
+  );
+};
+
+export default index;
