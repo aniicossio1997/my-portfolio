@@ -18,7 +18,7 @@ interface Props {
 const Card = ({ project }: Props) => {
   return (
     <Stack
-      h={{ base: "70%", md: "280px" }}
+      h={{ base: "100%", md: "280px" }}
       width={{ base: "320px", md: "600px", lg: "800px" }}
       direction={{ base: "column-reverse", md: "row" }}
       boxShadow="dark-lg"
@@ -27,14 +27,14 @@ const Card = ({ project }: Props) => {
     >
       <Stack
         w={{ base: "80%", md: "600px" }}
-        h={"100%"}
         alignItems={"center"}
         alignSelf={"center"}
       >
         <ImgCard to={project.img} />
       </Stack>
       <Stack
-        alignSelf={"center"}
+        paddingY={{ base: 2, sm: 4 }}
+        alignSelf={{ base: "center", md: "flex-start" }}
         alignItems={"center"}
         paddingX={{ base: undefined, md: 4 }}
         maxWidth={{ base: "70%", md: "60%" }}

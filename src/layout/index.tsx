@@ -1,5 +1,4 @@
-import { Box, Center, Container, Grid, Stack, VStack } from "@chakra-ui/react";
-import React from "react";
+import { Box, Center, Container, Stack } from "@chakra-ui/react";
 import Header from "../components/Header/Header";
 import Footer from "../components/footer";
 const index = ({ children }: any) => {

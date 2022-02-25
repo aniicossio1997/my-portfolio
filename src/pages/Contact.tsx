@@ -1,15 +1,4 @@
-import { Formik, Form, FormikHelpers } from "formik";
-import * as Yup from "yup";
-import {
-  Box,
-  Button,
-  Center,
-  Heading,
-  Input,
-  Stack,
-  Textarea,
-} from "@chakra-ui/react";
-import { InputText } from "../components/contactForm/InputText";
+import { Box, Center, Heading } from "@chakra-ui/react";
 import FormContact from "../components/contactForm/FormContact";
 
 export const Contact = () => {
@@ -23,11 +12,18 @@ export const Contact = () => {
         p={6}
         m="10px auto"
       >
-        <Center>
-          <Heading as="h2">Contact</Heading>
-        </Center>
+        <Heading
+          as="h2"
+          textAlign={"center"}
+          alignSelf={"centers"}
+          alignItems={"center"}
+          marginBottom={5}
+        >
+          Contact
+        </Heading>
         <FormContact />
       </Box>
     </>
   );
 };
+export default Contact;

@@ -31,7 +31,6 @@ const Header = () => {
       borderBottomColor={"gray.30"}
       borderBottomWidth={1}
       bg={useColorModeValue("gray.100", "gray.600")}
-      boxShadow={"2xl"}
     >
       <Stack direction={"row-reverse"}>
         <BtnModeSwitch />
@@ -44,7 +43,7 @@ const Header = () => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-            Chakra UI
+            ❰AC❱
           </Heading>
         </Flex>
 

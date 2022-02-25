@@ -9,7 +9,6 @@ const BoxDescription = () => {
         <Box
           textStyle={"p"}
           fontWeight={"thin"}
-          align={"justify"}
           color={useColorModeValue("gray.600", "white")}
         >
           {dataHome.description}

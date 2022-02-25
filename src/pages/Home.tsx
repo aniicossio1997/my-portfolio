@@ -1,7 +1,5 @@
-import { Box, Center, Grid, Image, useColorModeValue } from "@chakra-ui/react";
-
+import { Box, Center, Image } from "@chakra-ui/react";
 import home1 from "../assets/img/home1.svg";
-
 import BoxDescription from "../components/home/BoxDescription";
 import { dataHome } from "../components/home/dataHome";
 import GridHome from "../components/home/GridHome";
@@ -13,8 +11,11 @@ export const Home = () => {
           <Box
             textStyle={"h2"}
             fontWeight={"semibold"}
-            align={"center"}
             paddingBottom={10}
+            as="h2"
+            textAlign={"center"}
+            alignSelf={"centers"}
+            alignItems={"center"}
           >
             {dataHome.title}
           </Box>
@@ -36,3 +37,4 @@ export const Home = () => {
     </Center>
   );
 };
+export default Home;

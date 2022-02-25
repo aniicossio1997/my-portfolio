@@ -5,7 +5,7 @@ import ItemTool from "./ItemTool";
 
 const index = () => {
   return (
-    <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} spacing={5}>
+    <SimpleGrid columns={{ base: 1, sm: 2, md: 3, xl: 3 }} spacing={5}>
       {DataTools.map((itemTool) => (
         <ItemTool
           key={itemTool.name}

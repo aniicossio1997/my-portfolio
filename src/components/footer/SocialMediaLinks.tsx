@@ -1,11 +1,7 @@
-import {
-  ButtonGroup,
-  ButtonGroupProps,
-  IconButton,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { ButtonGroup, IconButton, useColorModeValue } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TiMail } from "react-icons/ti";
+import { DataFooterLinks } from "../../data/DataFooter";
 
 export const SocialMediaLinks = () => {
   const colorValue = useColorModeValue("gray.800", undefined);
@@ -15,20 +11,23 @@ export const SocialMediaLinks = () => {
       <IconButton
         as="a"
         alignSelf={"center"}
-        href="#"
+        href={DataFooterLinks.perfilLinkedin}
         aria-label="LinkedIn"
         icon={<FaLinkedin fontSize="20px" />}
+        target={"_blank"}
       />
       <IconButton
         as="a"
-        href="#"
+        href={DataFooterLinks.perfilGithub}
         aria-label="GitHub"
         icon={<FaGithub fontSize="20px" />}
+        target={"_blank"}
       />
       <IconButton
         as="a"
-        href="mailto:no-reply@example.com"
+        href={`mailto:anacossio7@gmail.com`}
         aria-label="Email"
+        target={"_blank"}
         icon={<TiMail fontSize="30px" />}
       />
     </ButtonGroup>

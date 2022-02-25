@@ -1,14 +1,4 @@
-import {
-  Box,
-  Heading,
-  Icon,
-  SimpleGrid,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import React from "react";
-import { FaReact, FaVuejs } from "react-icons/fa";
+import { Box, Heading } from "@chakra-ui/react";
 import ContainerCenter from "../components/common/ContainerCenter";
 import ToolsList from "../components/toolsList";
 export const Tools = () => {
@@ -23,3 +13,4 @@ export const Tools = () => {
     </ContainerCenter>
   );
 };
+export default Tools;
