@@ -7,12 +7,11 @@ interface Props {
 const ImgCard = ({ to }: Props) => {
   return (
     <Image
-      position={"relative"}
       src={to}
       alt="super hero"
-      objectFit={{ base: "cover", md: "cover" }}
-      minH={"280px"}
+      minH={"100%"}
       width={"100%"}
+      objectFit={{ base: "cover", sm: "fill" }}
       roundedBottomLeft={"lg"}
       roundedTopLeft={"lg"}
       roundedRight={{ base: "lg", md: 0 }}

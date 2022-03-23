@@ -29,6 +29,7 @@ const Card = ({ project }: Props) => {
         w={{ base: "80%", md: "600px" }}
         alignItems={"center"}
         alignSelf={"center"}
+        height={"100%"}
       >
         <ImgCard to={project.img} />
       </Stack>
