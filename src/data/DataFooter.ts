@@ -8,7 +8,7 @@ export const DataFooterLinks: Data = {
 };
 export const DataCopyright: Data = {
   title: "Developed with React Js, chakra ui and typeScript",
-  copy: `© ${new Date().getFullYear()} All rights reserved.`,
+  copy: `© ${new Date().getFullYear()}`,
   by: " By Ana cossio",
-  code: "link",
+  code: "view code",
 };

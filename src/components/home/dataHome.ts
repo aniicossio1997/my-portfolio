@@ -1,7 +1,7 @@
 export const dataHome = {
-  title: "Hi, I'm Ana Cossio",
-  description: `Soy una persona apasionado por la tecnología, en constante aprendizaje,
-     me gusta trabajar en equipo y poder tener un grupo`,
-  btnTitle: "My work",
+  title: "!Hola :) !",
+  description: `Soy una persona apasionada por la tecnología que se encuentra en constante aprendizaje,tengo facilidad para resolver problemas analiticamente y con creatividad.,
+      `,
+  btnTitle: "Mis proyectos",
   btnPath: "/projects",
 };
