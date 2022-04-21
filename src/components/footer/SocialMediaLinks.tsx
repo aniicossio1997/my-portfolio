@@ -27,7 +27,8 @@ export const SocialMediaLinks = () => {
         as="a"
         href={`mailto:anacossio7@gmail.com`}
         aria-label="Email"
-        target={"_blank"}
+        target="_blank"
+        rel="noopener noreferrer"
         icon={<TiMail fontSize="30px" />}
       />
     </ButtonGroup>
