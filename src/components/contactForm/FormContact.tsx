@@ -1,10 +1,27 @@
 import { Formik, Form, FormikHelpers } from "formik";
-import { Button, Input, Stack, Textarea } from "@chakra-ui/react";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  Box,
+  Button,
+  Center,
+  CloseButton,
+  Heading,
+  Icon,
+  Input,
+  Spinner,
+  Stack,
+  Textarea,
+  useDisclosure,
+  VStack,
+} from "@chakra-ui/react";
 import { InputText } from "./InputText";
 import { ContactSchema, initialValues, Values } from "./dataForm";
 import { useRef, MutableRefObject, useEffect, useState } from "react";
 import emailjs, { init } from "@emailjs/browser";
 import { DataKeyEmail } from "../../data/DataKeyEmail";
+import { CloseIcon } from "@chakra-ui/icons";
 interface InputI {
   label: string;
   name: string;
@@ -14,15 +31,21 @@ interface InputI {
 interface RefObject<T> {
   readonly current: T | null | undefined;
 }
-
+type STATUS_SEND = "pedding" | "filled" | "success" | "failed" | "none";
+type STATUS_FORM = "RESET" | "SEND";
 const FormContact = () => {
+  const {
+    isOpen: isVisible,
+    onClose,
+    onOpen,
+  } = useDisclosure({ defaultIsOpen: true });
   emailjs.init(DataKeyEmail.user_id);
   const form = useRef<any>(""); // MutableRefObject<null>
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<STATUS_SEND>("none");
   const sendEmail = (value: Values) => {
     console.log("enviando mensaje.....");
     console.log(JSON.stringify(DataKeyEmail));
-    setIsLoading(true);
+    setIsLoading("pedding");
     emailjs
       .send(
         DataKeyEmail.service_id,
@@ -38,12 +61,14 @@ const FormContact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setIsLoading("success");
         },
         (error) => {
+          setIsLoading("failed");
           console.log(error.text);
         }
       );
-    setIsLoading(false);
+
     // fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
     //   method: "POST",
     //   headers: {
@@ -58,8 +83,25 @@ const FormContact = () => {
 
   return (
     <>
-      {isLoading ? (
-        <h1>ENVIANDO Mensaje...</h1>
+      {isLoading === "pedding" ? (
+        <Center>
+          <VStack spacing={4} align="stretch">
+            <Box>
+              <Heading as="h6" size="xs" display={"flex"}>
+                Enviando...
+              </Heading>
+            </Box>
+            <Box>
+              <Spinner
+                thickness="4px"
+                speed="0.65s"
+                emptyColor="gray.200"
+                color="blue.500"
+                size="xl"
+              />
+            </Box>
+          </VStack>
+        </Center>
       ) : (
         <Formik
           initialValues={initialValues}
@@ -71,6 +113,14 @@ const FormContact = () => {
         >
           {({ handleReset, errors }) => (
             <Form noValidate ref={form}>
+              {isLoading === "success" && (
+                <Alert status="success">
+                  <AlertIcon />
+                  <Box>
+                    <AlertTitle>Se envio el correo con exito!</AlertTitle>
+                  </Box>
+                </Alert>
+              )}
               <InputText
                 label={"Email"}
                 name={"email"}
