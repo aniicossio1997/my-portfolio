@@ -5,30 +5,32 @@ import { SocialMediaLinks } from "./SocialMediaLinks";
 
 const index = () => {
   return (
-    <Box as="footer" role="contentinfo" paddingY={2}>
-      <Center>
-        <Stack
-          direction={"column"}
-          spacing="4"
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
+    <Stack position="relative" bottom={0}>
+      <Box as="footer" role="contentinfo" paddingY={2}>
+        <Center>
           <Stack
-            direction="row"
-            alignItems={"center"}
+            direction={"column"}
             spacing="4"
-            align="center"
-            alignSelf={"center"}
-            justifyItems={"center"}
-            paddingLeft={3}
+            justifyContent={"center"}
+            alignItems={"center"}
           >
-            <SocialMediaLinks />
-          </Stack>
+            <Stack
+              direction="row"
+              alignItems={"center"}
+              spacing="4"
+              align="center"
+              alignSelf={"center"}
+              justifyItems={"center"}
+              paddingLeft={3}
+            >
+              <SocialMediaLinks />
+            </Stack>
 
-          <Copyright />
-        </Stack>
-      </Center>
-    </Box>
+            <Copyright />
+          </Stack>
+        </Center>
+      </Box>
+    </Stack>
   );
 };
 export default index;

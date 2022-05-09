@@ -9,7 +9,7 @@ import { Field } from "formik";
 interface Props {
   label: string;
   name: string;
-  type?: "text" | "email" | "textarea";
+  type?: "text" | "email" | "textarea" | undefined;
   [x: string]: any;
 }
 
@@ -17,7 +17,7 @@ export const InputText = ({ label, name, ...props }: Props) => {
   return (
     <>
       <Box mb={5}>
-        <Field name={name}>
+        <Field name={name} key={name}>
           {({
             field, // { name, value, onChange, onBlur }
             form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.

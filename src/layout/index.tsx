@@ -1,4 +1,4 @@
-import { Box, Center, Container, Stack } from "@chakra-ui/react";
+import { Box, Center, Container, Stack, VStack } from "@chakra-ui/react";
 import Header from "../components/Header/Header";
 import Footer from "../components/footer";
 const index = ({ children }: any) => {
@@ -10,7 +10,7 @@ const index = ({ children }: any) => {
         </Box>
         <Stack alignItems={"center"} justifyContent={"center"}>
           <Container maxWidth={{ base: "100%", md: "95%" }}>
-            <Stack
+            <VStack
               minH={"100%"}
               display={"flex"}
               alignContent={"center"}
@@ -18,10 +18,10 @@ const index = ({ children }: any) => {
               alignItems={"center"}
             >
               <Center alignSelf={"center"}>{children}</Center>
-            </Stack>
-            <Footer />
+            </VStack>
           </Container>
         </Stack>
+        <Footer />
       </Stack>
     </>
   );
