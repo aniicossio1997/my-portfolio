@@ -1,0 +1,22 @@
+{ "btnTitleVisit":"Go",
+  "btnTitleCode":"Code",
+  "heros": [
+    {
+    "title": "Super hero",
+    "description":
+      "In this project you can have your own league of heroes, developed in Reactjs with redux",
+    "img": "https://raw.githubusercontent.com/aniicossio1997/react-challenge/main/myTeam.png",
+    "to": "https://react-challenge-weld.vercel.app/",
+    "repository": "https://github.com/aniicossio1997/react-challenge"
+  },
+  {
+    "title": "Store",
+    "description":
+      "In this project you can see and choose products and then you can add products to cart, developed with Next, Redux and Typescript",
+    "img": "https://raw.githubusercontent.com/aniicossio1997/my-store/main/my_store.png",
+    "to": "https://my-store-ashy.vercel.app/",
+    "repository": "https://github.com/aniicossio1997/my-store"
+  }
+ ]
+
+}

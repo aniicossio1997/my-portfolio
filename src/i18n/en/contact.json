@@ -1,0 +1,10 @@
+{
+    "email": "Email",
+    "subject":"Subject",
+    "name":"Name",
+    "menssage":"Menssage",
+    "btn_send":"Send",
+    "btn_reset" :"Reset",
+    "msj_error":"Your message was sent successfull!"
+
+}

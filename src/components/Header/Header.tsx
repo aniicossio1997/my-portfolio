@@ -14,12 +14,16 @@ import { useMediaQuery, useColorMode } from "@chakra-ui/react";
 import BtnModeSwitch from "./BtnModeSwitch";
 import { basicRoutes } from "../../routes/basicRoutes";
 import ItemLink from "./ItemLink";
+import BtnTranslate from "./BtnTranslate";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleToggle = () => (isOpen ? onClose() : onOpen());
   const [isSmall] = useMediaQuery("(max-width: 780px)");
   const colorValue = useColorModeValue("gray.80", undefined);
+  const { t } = useTranslation(["home", "navbar"]);
+
   return (
     <Stack
       as={"header"}
@@ -31,6 +35,7 @@ const Header = () => {
       borderBottomColor={"gray.30"}
       borderBottomWidth={1}
       bg={useColorModeValue("gray.100", "gray.600")}
+      paddingX={{ base: undefined, md: 20 }}
     >
       <Stack direction={"row-reverse"}>
         <BtnModeSwitch />
@@ -41,7 +46,7 @@ const Header = () => {
         justifyContent="space-between"
         wrap="wrap"
       >
-        <Flex align="center" mr={5}>
+        <Flex align="center" mr={5} display="block">
           <Heading as="h1" size="lg" letterSpacing={"tighter"}>
             ❰AC❱
           </Heading>
@@ -62,8 +67,15 @@ const Header = () => {
           spacing={6}
         >
           {basicRoutes.map((route) => (
-            <ItemLink key={route.to} to={route.to} name={route.name} />
+            <ItemLink
+              key={route.to}
+              to={route.to}
+              name={t(`navbar:routeNames.${route.name}`)}
+            />
           ))}
+          <Box display={{ base: "none", md: "block" }} marginTop={5}>
+            <BtnTranslate />
+          </Box>
         </Stack>
       </Flex>
     </Stack>

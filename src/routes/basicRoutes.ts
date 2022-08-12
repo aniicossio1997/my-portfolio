@@ -19,25 +19,25 @@ export const basicRoutes: IRoute[] = [
     to: "/",
     path: "",
     Component: LazyHome,
-    name: "HOME",
+    name: "home",
   },
   {
     to: "/projects",
     path: "projects",
     Component: LazyProjects,
-    name: "PROJECTS",
+    name: "projects",
   },
   {
     to: "/tools",
     path: "tools",
     Component: LazyTools,
-    name: "TOOLS",
+    name: "tools",
   },
 
   {
     to: "/contact",
     path: "contact",
     Component: LazyContact,
-    name: "CONTACT",
+    name: "contact",
   },
 ];

@@ -1,21 +1,22 @@
-import { Heading, Icon, Image, Stack, Text } from "@chakra-ui/react";
-import BtnAnimation from "../common/BtnAnimation";
-import { DiAndroid, DiCode } from "react-icons/di";
-import {
-  RiCodeBoxLine,
-  RiCodeFill,
-  RiCodeSSlashFill,
-  RiMagicLine,
-} from "react-icons/ri";
+import { Heading, Icon, Stack, Text } from "@chakra-ui/react";
+import { RiCodeSSlashFill } from "react-icons/ri";
+
 import { ViewIcon } from "@chakra-ui/icons";
 import BtnItem from "./BtnItem";
 import ImgCard from "./ImgCard";
 import { IProject } from "../../ts/interfaces/IProject";
+import { useTranslation } from "react-i18next";
+import BtnAnimation from "../common/BtnAnimation";
+import { useEffect } from "react";
 
 interface Props {
   project: IProject;
 }
 const Card = ({ project }: Props) => {
+  const { t } = useTranslation(["projects"]);
+  const btnTitle = t("btnTitleVisit");
+  console.log(btnTitle);
+
   return (
     <Stack
       h={{ base: "100%", md: "280px" }}
@@ -48,19 +49,26 @@ const Card = ({ project }: Props) => {
         </Text>
 
         <Stack direction={"row"} w={"100%"} justifyContent={"space-around"}>
-          <BtnItem
-            title="Visit Page"
+          <BtnAnimation
+            size="md"
+            height="40px"
+            width="50%"
+            as={"a"}
+            target="_blank"
             colorScheme={"pink"}
             href={project.to}
             IconBtn={<ViewIcon height={5} width={5} />}
-          />
+          >
+            <h1>{t("btnTitleVisit")}</h1>
+          </BtnAnimation>
           <BtnItem
-            title="Code"
             IconBtn={<Icon as={RiCodeSSlashFill} boxSize={"25px"} />}
             href={project.repository}
             colorScheme="pink"
             variant={"outline"}
-          />
+          >
+            {t("btnTitleCode")}
+          </BtnItem>
         </Stack>
       </Stack>
     </Stack>

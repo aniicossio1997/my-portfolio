@@ -1,0 +1,8 @@
+{
+    "routeNames":{
+        "home":"HOME",
+        "projects":"PROJECTS",
+        "tools":"TOOLS",
+        "contact":"CONTACT"
+    } 
+}

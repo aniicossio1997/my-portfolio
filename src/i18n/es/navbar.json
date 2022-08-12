@@ -1,0 +1,8 @@
+{
+    "routeNames":{
+        "home":"INICIO",
+        "projects":"PROYECTOS",
+        "tools":"HERRAMIENTAS",
+        "contact":"CONTACTO"
+    } 
+}

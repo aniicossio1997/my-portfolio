@@ -38,7 +38,11 @@ const useContacForm = () => {
           setIsLoading("failed");
           console.log(error.text);
         }
-      );
+      )
+      .catch((e) => {
+        setIsLoading("failed");
+        console.log(e);
+      });
   };
   return { sendEmail, isLoading };
 };

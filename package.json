@@ -11,18 +11,15 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "@types/axios": "^0.14.0",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^17.0.20",
-    "@types/react-dom": "^17.0.9",
-    "@types/react-router-dom": "^5.3.3",
-    "@types/yup": "^0.29.13",
     "axios": "^0.25.0",
     "formik": "^2.2.9",
     "framer-motion": "^5",
+    "i18next": "^21.8.14",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "i18next-http-backend": "^1.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "11.8.x",
     "react-icons": "^4.3.1",
     "react-loader-spinner": "^6.0.0-0",
     "react-router-dom": "^6.2.1",
@@ -56,6 +53,13 @@
     ]
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/yup": "^0.29.13",
     "eslint-plugin-react-hooks": "^4.3.0"
   }
 }

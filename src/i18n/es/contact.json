@@ -1,0 +1,15 @@
+{
+"form":{
+    "email": "Correo Electronico",
+    "subject":"Asunto",
+    "name":"Nombre",
+    "menssage":"Mensaje",
+    "btn_send":"Enviar",
+    "btn_reset" :"Limpiar",
+    "msj_error":"Tu mensaje se envio exitosamente!"
+},
+"validation_inputs":{
+
+}
+
+}
