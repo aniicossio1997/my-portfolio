@@ -8,22 +8,22 @@ interface IDataInput {
   Component: ComponentWithAs<any, any>;
 }
 export const DataInputList: IDataInput[] = [
-  { label: "Email", name: "email", type: "email", Component: Input },
+  { label: "email", name: "email", type: "email", Component: Input },
   {
-    label: "Subject",
+    label: "subject",
     name: "subject",
     type: "text",
     Component: Input,
   },
   {
-    label: "Name",
+    label: "name",
     name: "name",
     type: "text",
     Component: Input,
   },
   {
-    label: "Menssage",
-    name: "menssage",
+    label: "message",
+    name: "message",
     type: "textarea",
     Component: Textarea,
   },

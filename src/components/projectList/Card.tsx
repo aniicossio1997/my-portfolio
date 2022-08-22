@@ -15,7 +15,6 @@ interface Props {
 const Card = ({ project }: Props) => {
   const { t } = useTranslation(["projects"]);
   const btnTitle = t("btnTitleVisit");
-  console.log(btnTitle);
 
   return (
     <Stack

@@ -22,7 +22,7 @@ const useContacForm = () => {
         DataKeyEmail.template_id,
         {
           from_name: value.name,
-          message: value.menssage,
+          message: value.message,
           from_email: value.email,
           subject: value.subject,
         },

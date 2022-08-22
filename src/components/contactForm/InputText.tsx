@@ -5,9 +5,10 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 import { Field } from "formik";
+import { ReactNode } from "react";
 
 interface Props {
-  label: string;
+  label: string | ReactNode;
   name: string;
   type?: "text" | "email" | "textarea" | undefined;
   [x: string]: any;

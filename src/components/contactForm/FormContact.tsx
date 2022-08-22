@@ -16,6 +16,7 @@ import { DataKeyEmail } from "../../data/DataKeyEmail";
 import Loading from "../common/loading/Loading";
 import { DataInputList } from "./DataInputList";
 import useContacForm from "./useContacForm";
+import { Trans, useTranslation } from "react-i18next";
 interface InputI {
   label: string;
   name: string;
@@ -36,6 +37,7 @@ const FormContact = () => {
   emailjs.init(DataKeyEmail.user_id);
   const form = useRef<any>(""); // MutableRefObject<null>
   const { sendEmail, isLoading } = useContacForm();
+  const { t } = useTranslation("contact");
 
   return (
     <>
@@ -61,11 +63,12 @@ const FormContact = () => {
             {DataInputList.map((dataInput) => (
               <InputText
                 key={dataInput.label}
-                label={dataInput.label}
+                label={t(dataInput.label)}
                 name={dataInput.name}
                 Component={dataInput.Component}
               />
             ))}
+
             <Stack direction={"column"} spacing={4} mt={5}>
               <Button
                 colorScheme="pink"
@@ -73,7 +76,7 @@ const FormContact = () => {
                 type={"submit"}
                 width={"fullWidth"}
               >
-                Send
+                {t("btn_title.send")}
               </Button>
               <Button
                 colorScheme={"gray"}
@@ -83,7 +86,7 @@ const FormContact = () => {
                 onClick={handleReset}
                 width={"fullWidth"}
               >
-                reset
+                {t("btn_title.reset")}
               </Button>
             </Stack>
           </Form>

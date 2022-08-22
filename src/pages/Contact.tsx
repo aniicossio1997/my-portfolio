@@ -1,7 +1,10 @@
 import { Box, Center, Heading } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import FormContact from "../components/contactForm/FormContact";
 
 export const Contact = () => {
+  const { t } = useTranslation("contact");
+
   return (
     <>
       <Box
@@ -19,7 +22,7 @@ export const Contact = () => {
           alignItems={"center"}
           marginBottom={5}
         >
-          Contact
+          {t("title")}
         </Heading>
         <FormContact />
       </Box>

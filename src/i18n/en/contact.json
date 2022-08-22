@@ -1,10 +1,26 @@
 {
+    "title":"Contact",
     "email": "Email",
     "subject":"Subject",
     "name":"Name",
-    "menssage":"Menssage",
+    "message":"Message",
     "btn_send":"Send",
     "btn_reset" :"Reset",
-    "msj_error":"Your message was sent successfull!"
+    "msj_error":"Your message was sent successfull!",
+    "btn_title":{
+        "reset":"Reset",
+        "send":"Send"
+    },
+    "validation_inputs":{
+        "name":"Name is required",
+        "subject":"Subject is required",
+        "message":"Message is required",
+        "email":{
+            "required":"Email is required",
+            "Invalid":"Invalid email"
+        },
+        "min":"This field must be at least 2 characters",
+        "max":"Sorry, Too Long!"
+    }
 
 }

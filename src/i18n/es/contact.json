@@ -1,15 +1,26 @@
 {
-"form":{
+    "title":"Contacto",
     "email": "Correo Electronico",
     "subject":"Asunto",
     "name":"Nombre",
-    "menssage":"Mensaje",
+    "message":"Mensaje",
     "btn_send":"Enviar",
     "btn_reset" :"Limpiar",
-    "msj_error":"Tu mensaje se envio exitosamente!"
-},
-"validation_inputs":{
-
-}
+    "msj_error":"Tu mensaje se envio exitosamente!",
+    "btn_title":{
+        "reset":"Limpiar",
+        "send":"Enviar"
+    },
+    "validation_inputs":{
+        "name":"El nombre es requerido",
+        "subject":"El asunto es requerido es requerido",
+        "message":"El Mensaje es requerido",
+        "email":{
+            "required":"Email es requerido",
+            "Invalid":"Correo electronico no es valido"
+        },
+        "min":"Es demasiado corto!",
+        "max":"Es demasiado Largo!"
+    }
 
 }
