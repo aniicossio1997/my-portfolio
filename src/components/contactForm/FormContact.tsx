@@ -55,7 +55,7 @@ const FormContact = () => {
               <Alert status="success">
                 <AlertIcon />
                 <Box>
-                  <AlertTitle>Se envio el correo con exito!</AlertTitle>
+                  <AlertTitle>Se envio el correo con exito !</AlertTitle>
                 </Box>
               </Alert>
             )}
