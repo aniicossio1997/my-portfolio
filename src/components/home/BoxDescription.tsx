@@ -1,8 +1,16 @@
-import { Box, Container, Stack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Icon,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import BtnAnimation from "../common/BtnAnimation";
 import { dataHome } from "./dataHome";
+import { ViewIcon } from "@chakra-ui/icons";
+
 const BoxDescription = () => {
   const { t } = useTranslation(["home"]);
 
@@ -24,6 +32,8 @@ const BoxDescription = () => {
             height={{ base: "28px", md: "48px" }}
             width="100%"
             variant="solid"
+            paddingY="4"
+            IconBtn={<Icon as={ViewIcon} boxSize={"25px"} />}
           >
             {t("btnTitle")}
           </BtnAnimation>

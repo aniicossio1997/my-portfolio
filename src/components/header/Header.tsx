@@ -39,6 +39,9 @@ const Header = () => {
     >
       <Stack direction={"row-reverse"}>
         <BtnModeSwitch />
+        <Box display={{ base: "flex", md: "none" }}>
+          <BtnTranslate />
+        </Box>
       </Stack>
       <Flex
         as="nav"

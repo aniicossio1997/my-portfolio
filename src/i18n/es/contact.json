@@ -17,7 +17,7 @@
         "message":"El Mensaje es requerido",
         "email":{
             "required":"Email es requerido",
-            "Invalid":"Correo electronico no es valido"
+            "invalid":"Correo electronico no es valido"
         },
         "min":"Es demasiado corto!",
         "max":"Es demasiado Largo!"

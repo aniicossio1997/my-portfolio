@@ -6,7 +6,6 @@ const ItemTool = ({ IconValue, name }: ITool) => {
   return (
     <Stack
       bg={"gray.200"}
-      height="80px"
       rounded={10}
       padding={5}
       alignItems={"center"}
@@ -16,8 +15,8 @@ const ItemTool = ({ IconValue, name }: ITool) => {
     >
       <Icon
         as={IconValue}
-        w={10}
-        h={10}
+        w={{ base: 12, md: 10 }}
+        h={{ base: 12, md: 10 }}
         alignSelf={"center"}
         color={"gray.600"}
       />

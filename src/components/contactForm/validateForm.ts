@@ -15,13 +15,17 @@ export const initialValues: Values = {
 };
 export const ContactSchema = Yup.object().shape({
   name: Yup.string()
-    .min(2, i18n.t("contact:validation_inputs.min"))
-    .max(80, "Sorry, Too Long!")
-    .required("Name is required"),
+    .min(2, "validation_inputs.min")
+    .max(80, "validation_inputs.max")
+    .required("validation_inputs.name"),
   subject: Yup.string()
-    .min(2, "Too short")
-    .max(100, "Sorry, Too Long")
-    .required("Subject is required"),
-  message: Yup.string().min(2, "Too Short!").required("Message is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
+    .min(2, "validation_inputs.min")
+    .max(100, "validation_inputs.max")
+    .required("validation_inputs.subject"),
+  message: Yup.string()
+    .min(2, "validation_inputs.min")
+    .required("validation_inputs.message"),
+  email: Yup.string()
+    .email("validation_inputs.email.invalid")
+    .required("validation_inputs.email.required"),
 });

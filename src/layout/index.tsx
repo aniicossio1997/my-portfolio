@@ -1,5 +1,5 @@
 import { Box, Center, Container, Stack, VStack } from "@chakra-ui/react";
-import Header from "../components/Header/Header";
+import Header from "../components/header/Header";
 import Footer from "../components/footer";
 const index = ({ children }: any) => {
   return (

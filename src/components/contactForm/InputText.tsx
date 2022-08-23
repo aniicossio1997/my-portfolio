@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/react";
 import { Field } from "formik";
 import { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   label: string | ReactNode;
@@ -15,6 +16,8 @@ interface Props {
 }
 
 export const InputText = ({ label, name, ...props }: Props) => {
+  const { t } = useTranslation(["contact"]);
+
   return (
     <>
       <Box mb={5}>
@@ -33,7 +36,7 @@ export const InputText = ({ label, name, ...props }: Props) => {
                 as={props.Component}
               />
 
-              <FormErrorMessage>{meta.error}</FormErrorMessage>
+              <FormErrorMessage> {t(meta.error)}</FormErrorMessage>
             </FormControl>
           )}
         </Field>

@@ -17,7 +17,7 @@
         "message":"Message is required",
         "email":{
             "required":"Email is required",
-            "Invalid":"Invalid email"
+            "invalid":"Invalid email"
         },
         "min":"This field must be at least 2 characters",
         "max":"Sorry, Too Long!"

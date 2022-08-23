@@ -1,4 +1,4 @@
-import { Heading, Icon, Stack, Text } from "@chakra-ui/react";
+import { Heading, Icon, Stack, Text, useMediaQuery } from "@chakra-ui/react";
 import { RiCodeSSlashFill } from "react-icons/ri";
 
 import { ViewIcon } from "@chakra-ui/icons";
@@ -7,13 +7,15 @@ import ImgCard from "./ImgCard";
 import { IProject } from "../../ts/interfaces/IProject";
 import { useTranslation } from "react-i18next";
 import BtnAnimation from "../common/BtnAnimation";
-import { useEffect } from "react";
+import { GoMarkGithub } from "react-icons/go";
 
 interface Props {
   project: IProject;
 }
 const Card = ({ project }: Props) => {
   const { t } = useTranslation(["projects"]);
+  const [isMinThan820] = useMediaQuery("(max-width: 820px)");
+
   const btnTitle = t("btnTitleVisit");
 
   return (
@@ -58,15 +60,23 @@ const Card = ({ project }: Props) => {
             href={project.to}
             IconBtn={<ViewIcon height={5} width={5} />}
           >
-            <h1>{t("btnTitleVisit")}</h1>
+            {isMinThan820 ? (
+              <Icon as={ViewIcon} boxSize={"20px"} />
+            ) : (
+              t("btnTitleVisit")
+            )}
           </BtnAnimation>
           <BtnItem
-            IconBtn={<Icon as={RiCodeSSlashFill} boxSize={"25px"} />}
+            IconBtn={<Icon as={GoMarkGithub} boxSize={"20px"} />}
             href={project.repository}
             colorScheme="pink"
             variant={"outline"}
           >
-            {t("btnTitleCode")}
+            {isMinThan820 ? (
+              <Icon as={GoMarkGithub} boxSize={"20px"} />
+            ) : (
+              t("btnTitleCode")
+            )}
           </BtnItem>
         </Stack>
       </Stack>

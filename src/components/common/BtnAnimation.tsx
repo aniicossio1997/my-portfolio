@@ -46,46 +46,4 @@ const BtnAnimation = ({
   );
 };
 
-// interface IBtnAnimate {
-//   title: any;
-//   IconBtn?: JSX.Element | string;
-//   [x: string]: any;
-// }
-// const BtnAnimation = ({ title, IconBtn = "See", ...x }: IBtnAnimate) => {
-//   const { t } = useTranslation(["home"]);
-//   const localI18n = localStorage.getItem("localI18n");
-//   const [elementContext, setElementContext] = useState<any>(title);
-//   useEffect(() => {
-//     console.log(localStorage.getItem("localI18n"));
-//   }, []);
-//   return (
-//     <>
-//       <Button
-//         onMouseEnter={() => setElementContext(IconBtn)}
-//         onMouseLeave={() => setElementContext(title)}
-//         {...x}
-//       >
-//         {elementContext}
-//       </Button>
-//     </>
-//   );
-// };
-
-// export const ProductCard = ({ children, product }: ProductCardProps ) => {
-
-//   const { counter, increaseBy } = useProduct();
-
-//   return (
-//       <Provider value={{
-//           counter,
-//           increaseBy,
-//           product
-//       }}>
-//           <div className={ styles.productCard }>
-//               { children }
-//           </div>
-//       </Provider>
-//   )
-// }
-
 export default BtnAnimation;
