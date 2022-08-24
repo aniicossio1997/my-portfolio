@@ -1,4 +1,11 @@
-import { Heading, Icon, Stack, Text, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { RiCodeSSlashFill } from "react-icons/ri";
 
 import { ViewIcon } from "@chakra-ui/icons";
@@ -8,79 +15,109 @@ import { IProject } from "../../ts/interfaces/IProject";
 import { useTranslation } from "react-i18next";
 import BtnAnimation from "../common/BtnAnimation";
 import { GoMarkGithub } from "react-icons/go";
+import { motion, Variants } from "framer-motion";
 
 interface Props {
   project: IProject;
 }
+const child: Variants = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 200,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 200,
+      delay: 1,
+    },
+  },
+};
+const child2: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const Card = ({ project }: Props) => {
   const { t } = useTranslation(["projects"]);
   const [isMinThan820] = useMediaQuery("(max-width: 820px)");
-
   const btnTitle = t("btnTitleVisit");
 
   return (
-    <Stack
-      h={{ base: "100%", md: "280px" }}
-      width={{ base: "320px", md: "600px", lg: "800px" }}
-      direction={{ base: "column-reverse", md: "row" }}
-      boxShadow="dark-lg"
-      borderRadius={10}
-      paddingY={{ base: 4, md: 0 }}
-    >
+    <Box as={motion.div} variants={child2} initial="hidden" animate={"visible"}>
       <Stack
-        w={{ base: "80%", md: "600px" }}
-        alignItems={"center"}
-        alignSelf={"center"}
-        height={"100%"}
+        h={{ base: "100%", md: "280px" }}
+        width={{ base: "320px", md: "600px", lg: "800px" }}
+        direction={{ base: "column-reverse", md: "row" }}
+        boxShadow="dark-lg"
+        borderRadius={10}
+        paddingY={{ base: 4, md: 0 }}
       >
-        <ImgCard to={project.img} />
-      </Stack>
-      <Stack
-        paddingY={{ base: 2, sm: 4 }}
-        alignSelf={{ base: "center", md: "flex-start" }}
-        alignItems={"center"}
-        paddingX={{ base: undefined, md: 4 }}
-        maxWidth={{ base: "70%", md: "60%" }}
-      >
-        <Heading textStyle={"h2"} mb={5}>
-          {project.title}
-        </Heading>
-        <Text textStyle={"p"} align={"justify"}>
-          {project.description}
-        </Text>
+        <Stack
+          w={{ base: "80%", md: "600px" }}
+          alignItems={"center"}
+          alignSelf={"center"}
+          height={"100%"}
+        >
+          <ImgCard to={project.img} />
+        </Stack>
+        <Stack
+          paddingY={{ base: 2, sm: 4 }}
+          alignSelf={{ base: "center", md: "flex-start" }}
+          alignItems={"center"}
+          paddingX={{ base: undefined, md: 4 }}
+          maxWidth={{ base: "70%", md: "60%" }}
+        >
+          <Heading textStyle={"h2"} mb={5}>
+            {project.title}
+          </Heading>
+          <Text textStyle={"p"} align={"justify"}>
+            {project.description}
+          </Text>
 
-        <Stack direction={"row"} w={"100%"} justifyContent={"space-around"}>
-          <BtnAnimation
-            size="md"
-            height="40px"
-            width="50%"
-            as={"a"}
-            target="_blank"
-            colorScheme={"pink"}
-            href={project.to}
-            IconBtn={<ViewIcon height={5} width={5} />}
-          >
-            {isMinThan820 ? (
-              <Icon as={ViewIcon} boxSize={"20px"} />
-            ) : (
-              t("btnTitleVisit")
-            )}
-          </BtnAnimation>
-          <BtnItem
-            IconBtn={<Icon as={GoMarkGithub} boxSize={"20px"} />}
-            href={project.repository}
-            colorScheme="pink"
-            variant={"outline"}
-          >
-            {isMinThan820 ? (
-              <Icon as={GoMarkGithub} boxSize={"20px"} />
-            ) : (
-              t("btnTitleCode")
-            )}
-          </BtnItem>
+          <Stack direction={"row"} w={"100%"} justifyContent={"space-around"}>
+            <BtnAnimation
+              size="md"
+              height="50px"
+              width="50%"
+              target="_blank"
+              colorScheme={"pink"}
+              href={project.to}
+              IconBtn={<ViewIcon height={6} width={6} />}
+            >
+              {isMinThan820 ? (
+                <Icon as={ViewIcon} boxSize={"20px"} />
+              ) : (
+                t("btnTitleVisit")
+              )}
+            </BtnAnimation>
+            <BtnItem
+              IconBtn={<Icon as={GoMarkGithub} boxSize={"20px"} />}
+              href={project.repository}
+              colorScheme="pink"
+              variant={"outline"}
+            >
+              {isMinThan820 ? (
+                <Icon as={GoMarkGithub} boxSize={"20px"} />
+              ) : (
+                t("btnTitleCode")
+              )}
+            </BtnItem>
+          </Stack>
         </Stack>
       </Stack>
-    </Stack>
+    </Box>
   );
 };
 

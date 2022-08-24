@@ -4,6 +4,7 @@ import BoxDescription from "../components/home/BoxDescription";
 import GridHome from "../components/home/GridHome";
 
 import { useTranslation } from "react-i18next";
+import TextAnimation from "../components/common/TextAnimation";
 
 export const Home = () => {
   const { t } = useTranslation(["home"]);
@@ -16,12 +17,11 @@ export const Home = () => {
             textStyle={"h2"}
             fontWeight={"semibold"}
             paddingBottom={{ base: 5, md: 10 }}
-            as="h2"
             textAlign={"center"}
             alignSelf={"centers"}
             alignItems={"center"}
           >
-            {t("home:title")}
+            <TextAnimation text={t("title")} />
           </Box>
         </Box>
         <Box gridArea="description">

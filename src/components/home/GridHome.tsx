@@ -22,8 +22,8 @@ const GridHome = ({ children }: any) => {
                   'description description'
                   'image image'
                   `,
-        xl: `'title title '
-                 'description image'
+        md: `'title title title '
+                 'description image image'
                  `,
       }}
       gap={5}

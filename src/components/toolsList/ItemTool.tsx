@@ -1,10 +1,21 @@
 import { Icon, Stack, Text } from "@chakra-ui/react";
+import { motion, Variants } from "framer-motion";
 import React from "react";
 import { ITool } from "../../ts/interfaces/ITool";
-
+const variantDiv: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 const ItemTool = ({ IconValue, name }: ITool) => {
   return (
     <Stack
+      as={motion.div}
+      initial="hidden"
+      animate={"visible"}
+      variants={variantDiv}
       bg={"gray.200"}
       rounded={10}
       padding={5}
