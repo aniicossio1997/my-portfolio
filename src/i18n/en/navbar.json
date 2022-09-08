@@ -2,7 +2,7 @@
     "routeNames":{
         "home":"HOME",
         "projects":"PROJECTS",
-        "tools":"TOOLS",
+        "tools":"SKILLS",
         "contact":"CONTACT"
     } 
 }

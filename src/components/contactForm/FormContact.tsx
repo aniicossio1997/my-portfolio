@@ -1,4 +1,3 @@
-import { Formik, Form, FormikHelpers, FormikState } from "formik";
 import {
   Alert,
   AlertIcon,
@@ -8,20 +7,17 @@ import {
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
-import { InputText } from "./InputText";
-import { ContactSchema, initialValues, Values } from "./validateForm";
-import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Form, Formik, FormikHelpers } from "formik";
+import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { DataKeyEmail } from "../../data/DataKeyEmail";
 import Loading from "../common/loading/Loading";
 import { DataInputList } from "./DataInputList";
+import { InputText } from "./InputText";
 import useContacForm from "./useContacForm";
-import { Trans, useTranslation } from "react-i18next";
-interface InputI {
-  label: string;
-  name: string;
-  type?: "text" | "email" | "textarea";
-}
+import { ContactSchema, initialValues, Values } from "./validateForm";
+
 //index.ts, line 80
 interface RefObject<T> {
   readonly current: T | null | undefined;
@@ -42,6 +38,7 @@ const FormContact = () => {
   return (
     <>
       {isLoading === "pedding" && <Loading />}
+
       <Formik
         initialValues={initialValues}
         onSubmit={(values: Values, { resetForm }: FormikHelpers<Values>) => {

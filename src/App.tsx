@@ -1,7 +1,8 @@
-import { Container, Stack } from "@chakra-ui/react";
-import React, { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { DelayedFallback } from "./components/common/loading/DelayedFallback";
+import { SpinnerGrid } from "./components/common/loading/SpinnerGrid";
 import Layout from "./layout";
 import { NotFound } from "./pages";
 import { basicRoutes } from "./routes/basicRoutes";
@@ -9,7 +10,13 @@ function App() {
   return (
     <>
       <Layout>
-        <Suspense fallback="cargando....">
+        <Suspense
+          fallback={
+            <DelayedFallback>
+              <SpinnerGrid />
+            </DelayedFallback>
+          }
+        >
           <Routes>
             {basicRoutes.map((route) => (
               <Route
