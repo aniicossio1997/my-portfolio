@@ -5,7 +5,7 @@ import "./style.css";
 interface IProps {
   title?: string;
 }
-const Loading = ({ title = "Enviando" }: IProps) => {
+const Loading = ({ title = "" }: IProps) => {
   return (
     <>
       <div className="spiner-container">

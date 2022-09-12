@@ -49,8 +49,21 @@ const Header = () => {
         justifyContent="space-between"
         wrap="wrap"
       >
-        <Flex align="center" mr={5} display="block">
-          <Heading as="h1" size="lg" letterSpacing={"tighter"}>
+        <Flex
+          align="center"
+          mr={4}
+          display="block"
+          position="relative"
+          top={-10}
+          left={0}
+        >
+          <Heading
+            as="h1"
+            size="lg"
+            letterSpacing={"tighter"}
+            position="absolute"
+            fontSize={{ base: 26, md: 40 }}
+          >
             ❰AC❱
           </Heading>
         </Flex>

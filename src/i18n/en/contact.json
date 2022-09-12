@@ -21,6 +21,8 @@
         },
         "min":"This field must be at least 2 characters",
         "max":"Sorry, Too Long!"
-    }
+    },
+    "msj_response":"Your message was sent successfull !",
+    "loading_title":"Sending"
 
 }

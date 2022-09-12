@@ -5,6 +5,6 @@ type JSXLAZY = () => React.LazyExoticComponent<() => JSX.Element>;
 export interface IRoute {
   to: string;
   path: string;
-  Component: LazyExoticComponent<JSXComponent> | JSXComponent | any;
+  Component: LazyExoticComponent<JSXComponent> | JSXComponent;
   name: string;
 }

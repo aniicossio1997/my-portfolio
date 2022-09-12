@@ -12,6 +12,7 @@ const BtnTranslate = () => {
         value={localStorage.getItem("localI18n") || ""}
         onChange={handleChanged}
         bgColor="whiteAlpha.600"
+        fontSize={{ base: 15, md: 18 }}
       >
         <option value="en">EN</option>
         <option value="es">ES</option>

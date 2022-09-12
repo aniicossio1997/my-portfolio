@@ -15,7 +15,9 @@ const ItemLink = ({ to, name }: Props) => {
         direction="row"
         spacing={5}
       >
-        <Text fontWeight={"bold"}>{name}</Text>
+        <Text fontWeight={"bold"} fontSize={{ base: 15, md: 18 }}>
+          {name}
+        </Text>
       </Stack>
     </Link>
   );

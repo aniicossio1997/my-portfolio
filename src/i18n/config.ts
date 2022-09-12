@@ -29,8 +29,13 @@ const options = {
   checkWhitelist: true,
 };
 const DEFAULT_LANGUAGE = "en";
+//se ejecuta antes
 if (!Boolean(localStorage.getItem("localI18n"))) {
   localStorage.setItem("localI18n", "en");
+}
+//se ejecuta antes
+if (!Boolean(localStorage.getItem("chakra-ui-color-mode"))) {
+  localStorage.setItem("chakra-ui-color-mode", "light");
 }
 export const resources = {
   en: en,

@@ -1,7 +1,10 @@
 import { Box, Heading, Image, Stack } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import errorImg from "../assets/img/errorImg.svg";
 export const NotFound = () => {
+  const { t } = useTranslation("notFound");
+
   return (
     <>
       <Stack
@@ -10,8 +13,9 @@ export const NotFound = () => {
         paddingX={10}
         minH={"100%"}
         justifyContent={"center"}
-        paddingBottom={20}
-        marginBottom={{ base: "20px", md: "100px" }}
+        paddingBottom={30}
+        marginBottom={{ base: "10px", md: "90px" }}
+        marginTop={{ base: 30, md: 50 }}
       >
         <Box
           w={{ base: "100%", md: "50vh" }}
@@ -20,7 +24,7 @@ export const NotFound = () => {
           justifyItems={"center"}
           justifySelf={"center"}
         >
-          <Heading>Lo sentimos pagina no encontrada</Heading>
+          <Heading textAlign={"center"}>{t("description")}</Heading>
         </Box>
         <Box w={{ base: "100%", md: "50vh" }} h={"100%"}>
           <Image src={errorImg} alt="error 404" width={"100%"} />

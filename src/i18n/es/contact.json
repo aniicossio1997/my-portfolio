@@ -21,6 +21,8 @@
         },
         "min":"Es demasiado corto!",
         "max":"Es demasiado Largo!"
-    }
+    },
+    "msj_response":"Tu mensaje se envio exitosamente !",
+    "loading_title":"Enviando"
 
 }

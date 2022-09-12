@@ -6,7 +6,7 @@ interface Props {
 }
 export default function Logo({ title }: Props) {
   return (
-    <Heading as="h1" size="lg" letterSpacing={"tighter"} color={"pink.500"}>
+    <Heading as="h1" size="lg" letterSpacing={"tighter"} color={"pink.600"}>
       {title}
     </Heading>
   );

@@ -28,7 +28,9 @@ export const InputText = ({ label, name, ...props }: Props) => {
             meta,
           }: any) => (
             <FormControl isInvalid={meta.touched && meta.error}>
-              <FormLabel htmlFor={name}>{label}</FormLabel>
+              <FormLabel htmlFor={name} fontSize={{ base: 16, md: 19 }}>
+                {label}
+              </FormLabel>
               <Field
                 {...field}
                 id={name}

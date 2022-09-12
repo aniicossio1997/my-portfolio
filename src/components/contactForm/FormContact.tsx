@@ -37,8 +37,7 @@ const FormContact = () => {
 
   return (
     <>
-      {isLoading === "pedding" && <Loading />}
-
+      {isLoading === "pedding" && <Loading title={t("loading_title")} />}
       <Formik
         initialValues={initialValues}
         onSubmit={(values: Values, { resetForm }: FormikHelpers<Values>) => {
@@ -52,7 +51,7 @@ const FormContact = () => {
               <Alert status="success">
                 <AlertIcon />
                 <Box>
-                  <AlertTitle>Se envio el correo con exito !</AlertTitle>
+                  <AlertTitle>{t}</AlertTitle>
                 </Box>
               </Alert>
             )}
@@ -72,6 +71,7 @@ const FormContact = () => {
                 variant="solid"
                 type={"submit"}
                 width={"fullWidth"}
+                fontSize={{ base: 18, md: 20 }}
               >
                 {t("btn_title.send")}
               </Button>
@@ -82,6 +82,7 @@ const FormContact = () => {
                 variant="solid"
                 onClick={handleReset}
                 width={"fullWidth"}
+                fontSize={{ base: 17, md: 20 }}
               >
                 {t("btn_title.reset")}
               </Button>
