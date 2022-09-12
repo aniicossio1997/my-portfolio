@@ -16,6 +16,7 @@ import { basicRoutes } from "../../routes/basicRoutes";
 import ItemLink from "./ItemLink";
 import BtnTranslate from "./BtnTranslate";
 import { useTranslation } from "react-i18next";
+import Logo from "./Logo";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -57,15 +58,7 @@ const Header = () => {
           top={-10}
           left={0}
         >
-          <Heading
-            as="h1"
-            size="lg"
-            letterSpacing={"tighter"}
-            position="absolute"
-            fontSize={{ base: 26, md: 40 }}
-          >
-            ❰AC❱
-          </Heading>
+          <Logo />
         </Flex>
 
         <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
@@ -76,7 +69,7 @@ const Header = () => {
           direction={{ base: "column", md: "row" }}
           display={{ base: isOpen ? "flex" : "none", md: "flex" }}
           w={{ base: "100%", md: "auto" }}
-          alignItems={{ base: "center", md: "flex-end" }}
+          alignItems={{ base: "center", md: "center" }}
           justifyContent={"end"}
           flexGrow={1}
           mt={{ base: 6, md: 0 }}

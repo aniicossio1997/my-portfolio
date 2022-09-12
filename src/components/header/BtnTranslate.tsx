@@ -13,6 +13,7 @@ const BtnTranslate = () => {
         onChange={handleChanged}
         bgColor="whiteAlpha.600"
         fontSize={{ base: 15, md: 18 }}
+        textAlign="center"
       >
         <option value="en">EN</option>
         <option value="es">ES</option>

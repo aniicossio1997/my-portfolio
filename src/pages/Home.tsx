@@ -16,7 +16,7 @@ export const Home = () => {
           <Box
             textStyle={"h2"}
             fontWeight={"semibold"}
-            paddingBottom={{ base: 5, md: 10 }}
+            marginBottom={{ base: 5, md: 12 }}
             textAlign={"center"}
             alignSelf={"centers"}
             alignItems={"center"}

@@ -18,8 +18,9 @@ export const Contact = () => {
         rounded="lg"
         shadow="1px 1px 3px rgba(0,0,0,0.3)"
         minWidth={{ base: 300, md: 600 }}
-        p={6}
-        m="10px auto"
+        paddingY={8}
+        paddingX={6}
+        marginTop={10}
       >
         <Heading
           as="h2"

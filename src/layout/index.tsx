@@ -4,22 +4,20 @@ import Footer from "../components/footer";
 const index = ({ children }: any) => {
   return (
     <>
-      <Stack h={"100%"} spacing={100}>
+      <Stack h={"100%"}>
         <Box mb={"50px"}>
           <Header />
         </Box>
-        <Stack alignItems={"center"} justifyContent={"center"}>
-          <Container maxWidth={{ base: "100%", md: "95%" }}>
-            <VStack
-              minH={"100%"}
-              display={"flex"}
-              alignContent={"center"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
-              <Center alignSelf={"center"}>{children}</Center>
-            </VStack>
-          </Container>
+        <Stack alignItems={"center"} justifyContent={"center"} flex={1}>
+          <VStack
+            display={"flex"}
+            alignContent={"center"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            marginTop={5}
+          >
+            <Center alignSelf={"center"}>{children}</Center>
+          </VStack>
         </Stack>
         <Footer />
       </Stack>

@@ -6,11 +6,9 @@ const ContainerCenter = ({ children }: any) => {
     <Stack
       justifyContent={"center"}
       minH={"100%"}
-      paddingX={{ base: undefined, lg: 20 }}
       direction={"column"}
       spacing="10"
       alignItems={"center"}
-      mb={{ base: 10, md: 5 }}
     >
       {children}
     </Stack>
