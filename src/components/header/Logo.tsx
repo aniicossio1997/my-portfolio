@@ -11,7 +11,8 @@ export default function Logo({ title = "" }: Props) {
       size="lg"
       letterSpacing={"tighter"}
       position="absolute"
-      fontSize={{ base: 26, md: 45 }}
+      fontSize={{ base: 26, md: 50 }}
+      fontFamily={"initial"}
     >
       ❰AC❱
     </Heading>

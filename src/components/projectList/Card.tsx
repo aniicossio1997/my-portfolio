@@ -58,7 +58,7 @@ const Card = ({ project }: Props) => {
     <Box as={motion.div} variants={child2} initial="hidden" animate={"visible"}>
       <Stack
         h={{ base: "100%", md: "280px" }}
-        width={{ base: "320px", md: "600px", lg: "800px" }}
+        width={{ base: "320px", md: "600px", lg: "820px" }}
         direction={{ base: "column-reverse", md: "row" }}
         boxShadow="dark-lg"
         borderRadius={10}
@@ -79,7 +79,7 @@ const Card = ({ project }: Props) => {
           paddingX={{ base: undefined, md: 4 }}
           maxWidth={{ base: "70%", md: "60%" }}
         >
-          <Heading textStyle={"h2"} mb={5}>
+          <Heading textStyle={"h2"} mb={4}>
             {project.title}
           </Heading>
           <Text textStyle={"p"} align={"justify"}>
@@ -87,11 +87,7 @@ const Card = ({ project }: Props) => {
           </Text>
 
           <Stack direction={"row"} w={"100%"} justifyContent={"space-around"}>
-            <BtnAnimation
-              size="md"
-              height="50px"
-              width="50%"
-              target="_blank"
+            <BtnItem
               colorScheme={"pink"}
               href={project.to}
               IconBtn={<ViewIcon height={6} width={6} />}
@@ -101,7 +97,7 @@ const Card = ({ project }: Props) => {
               ) : (
                 t("btnTitleVisit")
               )}
-            </BtnAnimation>
+            </BtnItem>
             <BtnItem
               IconBtn={<Icon as={GoMarkGithub} boxSize={"20px"} />}
               href={project.repository}

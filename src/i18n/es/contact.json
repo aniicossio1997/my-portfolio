@@ -14,10 +14,10 @@
     "validation_inputs":{
         "name":"El nombre es requerido",
         "subject":"El asunto es requerido es requerido",
-        "message":"El mensaje es requerido",
+        "message":"El Mensaje es requerido",
         "email":{
-            "required":"Email es requerido",
-            "invalid":"Correo electronico no es valido"
+            "required":"El email es requerido",
+            "invalid":"El correo electronico no es valido"
         },
         "min":"Es demasiado corto!",
         "max":"Es demasiado Largo!"

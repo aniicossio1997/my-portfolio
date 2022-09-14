@@ -20,7 +20,8 @@ export const Contact = () => {
         minWidth={{ base: 300, md: 600 }}
         paddingY={8}
         paddingX={6}
-        marginTop={10}
+        marginTop={{ base: 4, md: 20 }}
+        marginBottom={4}
       >
         <Heading
           as="h2"

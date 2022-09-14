@@ -39,6 +39,7 @@ const themeConfig = extendTheme({
       baseStyle: {
         borderLeftRadius: 9999,
         borderRightRadius: 9999,
+        fontSize: ["12px", "18px", undefined],
       },
     },
     Heading: {
@@ -49,7 +50,7 @@ const themeConfig = extendTheme({
   textStyles: {
     h1: {
       // you can also use responsive styles
-      fontSize: ["48px", "72px"],
+      fontSize: ["40px", "72px"],
       fontWeight: "semibold",
       lineHeight: "110%",
       letterSpacing: "-0.8%",

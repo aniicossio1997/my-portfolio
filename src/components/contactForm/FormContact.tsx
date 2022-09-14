@@ -37,7 +37,9 @@ const FormContact = () => {
 
   return (
     <>
-      {isLoading === "pedding" && <Loading title={t("loading_title")} />}
+      {isLoading === "pedding" && (
+        <Loading title={t("loading_title")} ifShowPoints={true} />
+      )}
       <Formik
         initialValues={initialValues}
         onSubmit={(values: Values, { resetForm }: FormikHelpers<Values>) => {
@@ -51,7 +53,7 @@ const FormContact = () => {
               <Alert status="success">
                 <AlertIcon />
                 <Box>
-                  <AlertTitle>{t}</AlertTitle>
+                  <AlertTitle>{t("msj_response")}</AlertTitle>
                 </Box>
               </Alert>
             )}

@@ -1,5 +1,6 @@
 import { Suspense, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import Loading from "./components/common/loading/Loading";
 import { SpinnerGrid } from "./components/common/loading/SpinnerGrid";
 import Layout from "./layout";
 import { NotFound } from "./pages";
@@ -18,7 +19,7 @@ function App() {
     <>
       <Layout>
         {showSpinner ? (
-          <SpinnerGrid />
+          <Loading />
         ) : (
           <Suspense fallback={null}>
             <Routes>

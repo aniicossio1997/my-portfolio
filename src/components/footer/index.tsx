@@ -10,14 +10,14 @@ const index = () => {
         <Center>
           <Stack
             direction={"column"}
-            spacing="4"
+            spacing="3"
             justifyContent={"center"}
             alignItems={"center"}
           >
             <Stack
               direction="row"
               alignItems={"center"}
-              spacing="4"
+              spacing="3"
               align="center"
               alignSelf={"center"}
               justifyItems={"center"}

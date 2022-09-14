@@ -31,8 +31,8 @@ const Header = () => {
       padding={4}
       pos={"fixed"}
       width={"100%"}
-      zIndex={{ base: 20, md: undefined }}
-      mb={"300px"}
+      zIndex={{ base: 20, md: 30 }}
+      marginBottom={350}
       borderBottomColor={"gray.30"}
       borderBottomWidth={1}
       bg={useColorModeValue("gray.100", "gray.600")}

@@ -14,10 +14,8 @@
  }
  
   
- 
-  
   .loader {
-    width: 100px;
+    width: 120px;
   }
   
   .loader-wheel {
@@ -31,13 +29,15 @@
     height: 50px;
     margin-bottom: 10px;
     width: 50px;
+    text-transform: uppercase !important;
   }
   
   .loader-text {
-    color: #fff;
+    color: rgb(210, 206, 206) !important;
     text-align: justify;
     font-family: arial, sans-serif;
-    text-transform: uppercase;
+    text-transform: uppercase !important;
+    animation: load 2s linear infinite;
   }
   
   .loader-text:after {

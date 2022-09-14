@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 const index = ({ children }: any) => {
   return (
     <>
-      <Stack h={"100%"}>
+      <Stack minHeight={"100%"} display="flex" flexDirection={"column"}>
         <Box mb={"50px"}>
           <Header />
         </Box>
@@ -14,7 +14,7 @@ const index = ({ children }: any) => {
             alignContent={"center"}
             justifyContent={"center"}
             alignItems={"center"}
-            marginTop={5}
+            marginTop={{ base: 70, md: 6 }}
           >
             <Center alignSelf={"center"}>{children}</Center>
           </VStack>
