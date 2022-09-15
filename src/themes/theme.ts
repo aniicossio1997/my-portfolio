@@ -35,16 +35,21 @@ const themeConfig = extendTheme({
     }),
   },
   components: {
+    Textarea: {
+      baseStyle: {
+        resize: "none",
+      },
+    },
     Button: {
       baseStyle: {
-        borderLeftRadius: 9999,
-        borderRightRadius: 9999,
         fontSize: ["12px", "18px", undefined],
       },
     },
     Heading: {
       //fontFamily: `'EB Garamond', "serif"`,
-      fontFamily: `'Ubuntu Mono', monospace`,
+      baseStyle: {
+        fontFamily: `'Ubuntu Mono', monospace`,
+      },
     },
   },
   textStyles: {
@@ -53,7 +58,7 @@ const themeConfig = extendTheme({
       fontSize: ["40px", "72px"],
       fontWeight: "semibold",
       lineHeight: "110%",
-      letterSpacing: "-0.8%",
+      letterSpacing: "1%",
       fontFamily: `'Ubuntu Mono', monospace`,
     },
     h2: {

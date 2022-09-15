@@ -14,8 +14,9 @@ const ItemLink = ({ to, name }: Props) => {
         color={pathname === to ? color : "inherit"}
         direction="row"
         spacing={5}
+        letterSpacing="1.2px"
       >
-        <Text fontWeight={"bold"} fontSize={{ base: 15, md: 18 }}>
+        <Text fontWeight={"bold"} fontSize={{ base: 16, md: 20 }}>
           {name}
         </Text>
       </Stack>

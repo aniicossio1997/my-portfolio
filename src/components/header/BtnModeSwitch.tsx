@@ -23,6 +23,7 @@ const BtnModeSwitch = () => {
       aria-label="Toggle color mode"
       onClick={toggleColorMode}
       icon={colorMode === "light" ? <FaMoon /> : <FaSun />}
+      marginBottom={{ base: undefined, md: "10px" }}
     />
   );
 };

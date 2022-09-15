@@ -29,6 +29,8 @@ const BtnAnimation = ({
       whileHover={{ scale: 0.8 }}
       onMouseEnter={() => setElementContext(IconBtn)}
       onMouseLeave={() => setElementContext(title)}
+      roundedRight={9999}
+      roundedLeft={9999}
       {...rest}
     >
       {elementContext ? elementContext : children}

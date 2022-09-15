@@ -8,7 +8,6 @@ interface IProps {
   ifShowPoints?: Boolean;
 }
 const Loading = ({ title = "", ifShowPoints = false }: IProps) => {
-  console.log(title, ifShowPoints);
   return (
     <>
       <div className="spiner-container">

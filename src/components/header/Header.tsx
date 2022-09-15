@@ -14,9 +14,10 @@ import { useMediaQuery, useColorMode } from "@chakra-ui/react";
 import BtnModeSwitch from "./BtnModeSwitch";
 import { basicRoutes } from "../../routes/basicRoutes";
 import ItemLink from "./ItemLink";
-import BtnTranslate from "./BtnTranslate";
+import BtnTranslateMovil from "./BtnTranslateMovil";
 import { useTranslation } from "react-i18next";
 import Logo from "./Logo";
+import BtnTranslateDesktop from "./BtnTranslateDesktop";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,11 +38,12 @@ const Header = () => {
       borderBottomWidth={1}
       bg={useColorModeValue("gray.100", "gray.600")}
       paddingX={{ base: undefined, md: 20 }}
+      paddingBottom={{ base: undefined, md: 4 }}
     >
       <Stack direction={"row-reverse"}>
         <BtnModeSwitch />
         <Box display={{ base: "flex", md: "none" }}>
-          <BtnTranslate />
+          <BtnTranslateMovil />
         </Box>
       </Stack>
       <Flex
@@ -83,7 +85,7 @@ const Header = () => {
             />
           ))}
           <Box display={{ base: "none", md: "block" }} marginTop={5}>
-            <BtnTranslate />
+            <BtnTranslateDesktop />
           </Box>
         </Stack>
       </Flex>
