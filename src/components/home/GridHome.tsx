@@ -10,7 +10,7 @@ const GridHome = ({ children }: any) => {
     <Grid
       rounded={"md"}
       maxWidth={"100%"}
-      mb={{ base: "60px", md: "170px" }}
+      mb={{ base: "60px", md: "100px" }}
       h={"100%"}
       maxH={"100%"}
       gridTemplateColumns={{
@@ -26,7 +26,7 @@ const GridHome = ({ children }: any) => {
                  'description image image'
                  `,
       }}
-      gap={{ base: 2, md: 5 }}
+      gap={{ base: 2, md: 4 }}
     >
       {children}
     </Grid>
