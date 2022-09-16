@@ -8,9 +8,8 @@ interface Props {
 const GridHome = ({ children }: any) => {
   return (
     <Grid
-      rounded={"md"}
       maxWidth={"100%"}
-      mb={{ base: "60px", md: "100px" }}
+      mb={{ base: "30px", md: "50px" }}
       h={"100%"}
       maxH={"100%"}
       gridTemplateColumns={{

@@ -10,16 +10,20 @@ export const Home = () => {
   const { t } = useTranslation(["home"]);
 
   return (
-    <Center maxWidth={{ base: "100%", md: "70%" }}>
+    <Center
+      maxWidth={{ base: "100%", md: "70%" }}
+      marginTop={{ base: 4, md: 20 }}
+      marginBottom={4}
+    >
       <GridHome>
         <Box gridArea="title">
           <Box
             textStyle={"h2"}
             fontWeight={"semibold"}
-            marginBottom={{ base: 2, md: 12 }}
             textAlign={"center"}
             alignSelf={"centers"}
             alignItems={"center"}
+            marginBottom={{ base: 2, md: 12 }}
           >
             <TextAnimation text={t("title")} />
           </Box>

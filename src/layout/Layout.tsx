@@ -13,7 +13,12 @@ const Layout = ({ children }: any) => {
   console.log(isHeightLargerThan800);
   return (
     <>
-      <Stack minHeight={"100%"} display="flex" flexDirection={"column"}>
+      <Stack
+        minHeight={"100%"}
+        display="flex"
+        flexDirection={"column"}
+        flex={1}
+      >
         <Box mb={"50px"}>
           <Header />
         </Box>
@@ -24,10 +29,10 @@ const Layout = ({ children }: any) => {
             justifyContent={"center"}
             alignItems={"center"}
             marginTop={{
-              base: `${isHeightLargerThan800 ? "70px" : 10}`,
+              base: `${isHeightLargerThan800 ? "60px" : 10}`,
               md: `${isHeightLargerThan800 ? 60 : 10}`,
             }}
-            minHeight={` ${isHeightLargerThan800 ? "90vh" : undefined}`}
+            minHeight={` ${isHeightLargerThan800 ? "80vh" : undefined}`}
           >
             <Center alignSelf={"center"}>{children}</Center>
           </VStack>
