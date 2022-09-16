@@ -1,21 +1,12 @@
-import { Box, ChakraComponent, Grid } from "@chakra-ui/react";
-import React from "react";
-type JSXComponent = () => JSX.Element;
+import { Grid } from "@chakra-ui/react";
 
-interface Props {
-  children: typeof Box | typeof Grid;
-}
 const GridHome = ({ children }: any) => {
   return (
     <Grid
-      maxWidth={"100%"}
+      width={{ base: "80%", md: "960px" }}
       mb={{ base: "30px", md: "50px" }}
-      h={"100%"}
-      maxH={"100%"}
-      gridTemplateColumns={{
-        base: "150px 250px  ",
-        md: "1fr 1fr",
-      }}
+      gridTemplateRows={{ base: "40px 1fr", md: "100px 1fr" }}
+      gridTemplateColumns={{ base: "290px 1fr 1fr", md: "500px 1fr 1fr" }}
       gridTemplateAreas={{
         base: `'title title'
                   'description description'
@@ -25,7 +16,8 @@ const GridHome = ({ children }: any) => {
                  'description image image'
                  `,
       }}
-      gap={{ base: 2, md: 4 }}
+      gap={{ base: 1, md: 2 }}
+      marginTop={{ base: undefined, lg: "-50px" }}
     >
       {children}
     </Grid>

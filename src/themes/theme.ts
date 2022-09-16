@@ -1,4 +1,4 @@
-import { extendTheme, theme, Button } from "@chakra-ui/react";
+import { extendTheme, theme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import "./../index.css";
 // 2. Add your color mode config

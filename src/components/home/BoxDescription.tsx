@@ -9,12 +9,10 @@ import {
 import { useTranslation } from "react-i18next";
 import BtnAnimation from "../common/BtnAnimation";
 import { ViewIcon } from "@chakra-ui/icons";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { IAnimationDiv } from "../../ts/interfaces/IAnimation";
 import { useNavigate } from "react-router-dom";
 
-const delay = 0;
-const duration = 0.1;
 const BoxDescription = () => {
   const { t } = useTranslation(["home"]);
   let navigate = useNavigate();
@@ -23,7 +21,7 @@ const BoxDescription = () => {
   };
   return (
     <Container maxWidth={"70%"} boxSizing="border-box">
-      <Stack spacing={5}>
+      <Stack spacing={4}>
         <Box
           as={motion.div}
           variants={IAnimationDiv}

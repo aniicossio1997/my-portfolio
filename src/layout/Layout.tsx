@@ -1,11 +1,4 @@
-import {
-  Box,
-  Center,
-  Container,
-  Stack,
-  useMediaQuery,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Center, Stack, useMediaQuery, VStack } from "@chakra-ui/react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer";
 const Layout = ({ children }: any) => {
@@ -13,12 +6,7 @@ const Layout = ({ children }: any) => {
   console.log(isHeightLargerThan800);
   return (
     <>
-      <Stack
-        minHeight={"100%"}
-        display="flex"
-        flexDirection={"column"}
-        flex={1}
-      >
+      <Stack minHeight={"100%"} display="flex" flexDirection={"column"}>
         <Box mb={"50px"}>
           <Header />
         </Box>
@@ -29,8 +17,8 @@ const Layout = ({ children }: any) => {
             justifyContent={"center"}
             alignItems={"center"}
             marginTop={{
-              base: `${isHeightLargerThan800 ? "60px" : 10}`,
-              md: `${isHeightLargerThan800 ? 60 : 10}`,
+              base: `${isHeightLargerThan800 ? "60px" : -10}`,
+              md: `${isHeightLargerThan800 ? 60 : -10}`,
             }}
             minHeight={` ${isHeightLargerThan800 ? "80vh" : undefined}`}
           >

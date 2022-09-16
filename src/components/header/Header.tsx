@@ -18,7 +18,6 @@ import BtnTranslateDesktop from "./BtnTranslateDesktop";
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleToggle = () => (isOpen ? onClose() : onOpen());
-  const [isSmall] = useMediaQuery("(max-width: 780px)");
   const colorValue = useColorModeValue("gray.80", undefined);
   const { t } = useTranslation(["home", "navbar"]);
 
@@ -29,7 +28,6 @@ const Header = () => {
       pos={"fixed"}
       width={"100%"}
       zIndex={{ base: 20, md: 30 }}
-      marginBottom={350}
       borderBottomColor={"gray.30"}
       borderBottomWidth={1}
       bg={useColorModeValue("gray.100", "gray.600")}
