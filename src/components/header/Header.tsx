@@ -1,16 +1,12 @@
-import React from "react";
 import {
   Box,
   Stack,
-  Heading,
   Flex,
-  Text,
-  Button,
   useDisclosure,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { useMediaQuery, useColorMode } from "@chakra-ui/react";
+import { useMediaQuery } from "@chakra-ui/react";
 import BtnModeSwitch from "./BtnModeSwitch";
 import { basicRoutes } from "../../routes/basicRoutes";
 import ItemLink from "./ItemLink";
@@ -82,6 +78,7 @@ const Header = () => {
               key={route.to}
               to={route.to}
               name={t(`navbar:routeNames.${route.name}`)}
+              handleParentHideMenu={handleToggle}
             />
           ))}
           <Box display={{ base: "none", md: "block" }} marginTop={5}>

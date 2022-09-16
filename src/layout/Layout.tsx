@@ -24,7 +24,7 @@ const Layout = ({ children }: any) => {
             justifyContent={"center"}
             alignItems={"center"}
             marginTop={{
-              base: `${isHeightLargerThan800 ? 60 : 10}`,
+              base: `${isHeightLargerThan800 ? "75px" : 10}`,
               md: `${isHeightLargerThan800 ? 60 : 10}`,
             }}
             minHeight={` ${isHeightLargerThan800 ? "90vh" : undefined}`}

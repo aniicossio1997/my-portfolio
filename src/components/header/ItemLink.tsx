@@ -3,10 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 interface Props {
   to: string;
   name: string;
+  handleParentHideMenu: () => void;
 }
-const ItemLink = ({ to, name }: Props) => {
+const ItemLink = ({ to, name, handleParentHideMenu }: Props) => {
   const { pathname } = useLocation();
   const color = useColorModeValue("pink.500", "pink.200");
+  const handleClick = () => {
+    handleParentHideMenu();
+  };
   return (
     <Link key={to} to={to}>
       <Stack
@@ -15,6 +19,7 @@ const ItemLink = ({ to, name }: Props) => {
         direction="row"
         spacing={5}
         letterSpacing="1.2px"
+        onClick={() => handleClick()}
       >
         <Text fontWeight={"bold"} fontSize={{ base: 16, md: 20 }}>
           {name}
