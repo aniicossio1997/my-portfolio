@@ -55,7 +55,7 @@ const themeConfig = extendTheme({
   textStyles: {
     h1: {
       // you can also use responsive styles
-      fontSize: ["40px", "72px"],
+      fontSize: ["40px", "60px", "72px"],
       fontWeight: "semibold",
       lineHeight: "110%",
       letterSpacing: "1%",

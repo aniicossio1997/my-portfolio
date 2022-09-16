@@ -14,7 +14,7 @@ const GridHome = ({ children }: any) => {
       h={"100%"}
       maxH={"100%"}
       gridTemplateColumns={{
-        base: "100px 200px  ",
+        base: "150px 250px  ",
         md: "1fr 1fr",
       }}
       gridTemplateAreas={{
