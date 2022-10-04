@@ -38,14 +38,20 @@ const BtnTranslateDesktop = () => {
               {localStorage.getItem("localI18n") || ""}
             </MenuButton>
 
-            <MenuList className={"btnTransladeDesktop"}>
+            <MenuList
+              className={"btnTransladeDesktop"}
+              paddingTop={0}
+              paddingBottom={0}
+            >
               <MenuItem
                 onClick={() => handleChanged("en")}
                 className={isActive("en") ? `isActive` : ""}
+                padding={2}
               >
                 EN
               </MenuItem>
               <MenuItem
+                padding={2}
                 onClick={() => handleChanged("es")}
                 className={isActive("es") ? `isActive` : ""}
               >
