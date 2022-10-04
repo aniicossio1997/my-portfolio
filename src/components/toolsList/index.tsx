@@ -1,5 +1,4 @@
-import { Heading, SimpleGrid } from "@chakra-ui/react";
-import React from "react";
+import { SimpleGrid } from "@chakra-ui/react";
 import DataTools from "../../data/DataTools";
 import ItemTool from "./ItemTool";
 

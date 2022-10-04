@@ -6,14 +6,12 @@ import {
   Text,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { RiCodeSSlashFill } from "react-icons/ri";
 
 import { ViewIcon } from "@chakra-ui/icons";
 import BtnItem from "./BtnItem";
 import ImgCard from "./ImgCard";
 import { IProject } from "../../ts/interfaces/IProject";
 import { useTranslation } from "react-i18next";
-import BtnAnimation from "../common/BtnAnimation";
 import { GoMarkGithub } from "react-icons/go";
 import { motion, Variants } from "framer-motion";
 

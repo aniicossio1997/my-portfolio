@@ -1,5 +1,4 @@
-import { Box, Center, Container, Stack } from "@chakra-ui/react";
-import React from "react";
+import { Box, Center, Stack } from "@chakra-ui/react";
 import { Copyright } from "./Copyright";
 import { SocialMediaLinks } from "./SocialMediaLinks";
 

@@ -6,7 +6,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { useMediaQuery } from "@chakra-ui/react";
 import BtnModeSwitch from "./BtnModeSwitch";
 import { basicRoutes } from "../../routes/basicRoutes";
 import ItemLink from "./ItemLink";

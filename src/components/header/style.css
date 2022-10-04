@@ -1,3 +1,7 @@
 .btnTransladeDesktop{
  min-width: 90px !important;
 }
+.isActive{
+    background-color:rgb(190, 215, 239,.5) !important;
+
+}

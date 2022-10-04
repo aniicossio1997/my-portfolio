@@ -1,6 +1,5 @@
 import { Icon, Stack, Text } from "@chakra-ui/react";
 import { motion, Variants } from "framer-motion";
-import React from "react";
 import { ITool } from "../../ts/interfaces/ITool";
 const variantDiv: Variants = {
   hidden: { y: 20, opacity: 0 },

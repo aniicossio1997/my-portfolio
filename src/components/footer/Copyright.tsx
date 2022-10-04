@@ -1,5 +1,4 @@
-import { Box, Center, Stack, Text, TextProps } from "@chakra-ui/react";
-import * as React from "react";
+import { Box, Stack, Text, TextProps } from "@chakra-ui/react";
 import { DataCopyright } from "../../data/DataFooter";
 
 export const Copyright = (props: TextProps) => (

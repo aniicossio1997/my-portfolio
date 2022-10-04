@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { FormikState } from "formik";
-import { ContactSchema, initialValues, Values } from "./validateForm";
+import { Values } from "./validateForm";
 import { DataKeyEmail } from "../../data/DataKeyEmail";
 import { useState } from "react";
 

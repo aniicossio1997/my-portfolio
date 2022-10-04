@@ -1,6 +1,4 @@
-import React from "react";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
-import { title } from "process";
+import { Heading } from "@chakra-ui/react";
 interface Props {
   title?: string;
 }

@@ -1,19 +1,21 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Button,
-  IconButton,
   Menu,
   MenuButton,
   MenuDivider,
-  MenuGroup,
   MenuItem,
+  MenuItemOption,
   MenuList,
+  MenuOptionGroup,
 } from "@chakra-ui/react";
-import React from "react";
 import useTranslate from "../../hook/useTranslate";
 import "./style.css";
 const BtnTranslateDesktop = () => {
   const { handleChanged } = useTranslate();
+  const isActive = (title: string) => {
+    return Boolean(localStorage.getItem("localI18n") === title);
+  };
   return (
     <>
       <Menu>
@@ -37,8 +39,18 @@ const BtnTranslateDesktop = () => {
             </MenuButton>
 
             <MenuList className={"btnTransladeDesktop"}>
-              <MenuItem onClick={() => handleChanged("en")}>EN</MenuItem>
-              <MenuItem onClick={() => handleChanged("es")}>ES</MenuItem>
+              <MenuItem
+                onClick={() => handleChanged("en")}
+                className={isActive("en") ? `isActive` : ""}
+              >
+                EN
+              </MenuItem>
+              <MenuItem
+                onClick={() => handleChanged("es")}
+                className={isActive("es") ? `isActive` : ""}
+              >
+                ES
+              </MenuItem>
             </MenuList>
           </>
         )}
