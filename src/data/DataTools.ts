@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import {
+  FaAngular,
   FaBootstrap,
   FaCss3Alt,
   FaGithub,
@@ -38,5 +39,7 @@ const DataTools: ITool[] = [
     name: "Vuejs",
     IconValue: FaVuejs,
   },
+  {name:"Angular",
+IconValue:FaAngular}
 ];
 export default DataTools;

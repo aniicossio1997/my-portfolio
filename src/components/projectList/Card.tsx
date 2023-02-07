@@ -14,7 +14,7 @@ import { IProject } from "../../ts/interfaces/IProject";
 import { useTranslation } from "react-i18next";
 import { GoMarkGithub } from "react-icons/go";
 import { motion, Variants } from "framer-motion";
-
+import "./style.css"
 interface Props {
   project: IProject;
 }
@@ -88,7 +88,9 @@ const Card = ({ project }: Props) => {
             <BtnItem
               colorScheme={"pink"}
               href={project.to}
-              IconBtn={<ViewIcon height={6} width={6} />}
+              IconBtn={<ViewIcon height={6} width={6} 
+              className={`${project.to ==="#" ? "not-active" :" "}`}
+              />}
             >
               {isMinThan820 ? (
                 <Icon as={ViewIcon} boxSize={"20px"} />
