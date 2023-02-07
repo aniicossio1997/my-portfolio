@@ -9,7 +9,7 @@ const ContainerCenter = ({ children }: any) => {
       direction={"column"}
       spacing="10"
       alignItems={"center"}
-      marginTop={"50px"}
+      marginTop={"5px"}
     >
       {children}
     </Stack>

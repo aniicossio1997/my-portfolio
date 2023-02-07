@@ -1,0 +1,24 @@
+main,
+.header {
+  padding: 30px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #2196F3;
+}
+
+.main {
+  min-height: 80vh;
+  line-height: 2;
+
+}
+
+.margin-top-max {
+  margin-top: 140px !important;
+}
+
+.margin-top-min {
+  margin-top: 50px !important;
+}

@@ -1,22 +1,27 @@
 {
-    "projects":[
-       {
+  "projects": [
+    {
       "title": "Super hero",
-      "description":
-        "En este proyecto podras tener tu propia liga de heroes, desarrollado en Reactjs con redux",
+      "description": "En este proyecto podras tener tu propia liga de heroes, desarrollado en Reactjs con redux",
       "img": "https://raw.githubusercontent.com/aniicossio1997/react-challenge/main/myTeam.png",
       "to": "https://react-challenge-weld.vercel.app/",
       "repository": "https://github.com/aniicossio1997/react-challenge"
     },
     {
       "title": "Store",
-      "description":
-        "En este proyecto puedes ver y elegir productos para tu carrito de compras, desarrollado con Next, Redux y Typescript",
+      "description": "En este proyecto puedes ver y elegir productos para tu carrito de compras, desarrollado con Next, Redux y Typescript",
       "img": "https://raw.githubusercontent.com/aniicossio1997/my-store/main/my_store.png",
       "to": "https://my-store-ashy.vercel.app/",
       "repository": "https://github.com/aniicossio1997/my-store"
+    },
+    {
+      "title": "Cripto Coin",
+      "description": "En este proyecto te muestra un listado de las 100 criptomonedas más populares, desarrollado en Angular Cli y Bootstraps",
+      "img": "https://raw.githubusercontent.com/aniicossio1997/Angular-cripto/main/show.png",
+      "to": "https://angular-cripto.vercel.app/",
+      "repository": "https://github.com/aniicossio1997/Angular-cripto"
     }
-   ],
-   "btnTitleVisit":"Visitar",
-   "btnTitleCode":"Codigo"
-  }
+  ],
+  "btnTitleVisit": "Visitar",
+  "btnTitleCode": "Codigo"
+}

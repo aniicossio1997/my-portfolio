@@ -17,7 +17,7 @@ const GridHome = ({ children }: any) => {
                  `,
       }}
       gap={{ base: 1, md: 2 }}
-      marginTop={{ base: undefined, lg: "-50px" }}
+      marginTop={{ base: '-20px', lg: "-50px" }}
     >
       {children}
     </Grid>

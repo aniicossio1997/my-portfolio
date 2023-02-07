@@ -1,15 +1,17 @@
-import { Box, Center, Heading } from "@chakra-ui/react";
+import { Box, Center, Container, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import FormContact from "../components/contactForm/FormContact";
 import { IAnimationDiv } from "../ts/interfaces/IAnimation";
+import ContainerCenter from "../components/common/ContainerCenter";
 
 export const Contact = () => {
   const { t } = useTranslation("contact");
 
   return (
     <>
-      <Box
+    <Container>
+    <Box
         as={motion.div}
         initial="hidden"
         animate={"visible"}
@@ -17,11 +19,8 @@ export const Contact = () => {
         borderWidth="1px"
         rounded="lg"
         shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        minWidth={{ base: 300, md: 600 }}
-        paddingY={8}
-        paddingX={6}
-        marginTop={{ base: 4, md: 100 }}
-        marginBottom={4}
+        maxWidth={{base:"90%",md:"500"}}
+        padding={4}
       >
         <Heading
           as="h2"
@@ -34,6 +33,8 @@ export const Contact = () => {
         </Heading>
         <FormContact />
       </Box>
+    </Container>
+
     </>
   );
 };

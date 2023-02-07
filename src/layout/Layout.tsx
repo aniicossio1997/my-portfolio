@@ -1,32 +1,21 @@
 import { Box, Center, Stack, useMediaQuery, VStack } from "@chakra-ui/react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer";
+import "./style.css"
 const Layout = ({ children }: any) => {
-  const [isHeightLargerThan800] = useMediaQuery("(max-height: 800px)");
-  console.log(isHeightLargerThan800);
+  const [isHeightMinThan800] = useMediaQuery("(max-height: 800px)");
+  const [isWidthMinThan900] = useMediaQuery("(max-width: 990px)");
   return (
     <>
-      <Stack minHeight={"100%"} display="flex" flexDirection={"column"}>
-        <Box mb={"50px"}>
+      <div>
+        <div className="header"></div>
           <Header />
-        </Box>
-        <Stack alignItems={"center"} justifyContent={"center"} flex={1}>
-          <VStack
-            display={"flex"}
-            alignContent={"center"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            marginTop={{
-              base: `${isHeightLargerThan800 ? "60px" : -10}`,
-              md: `${isHeightLargerThan800 ? 60 : -10}`,
-            }}
-            minHeight={` ${isHeightLargerThan800 ? "80vh" : undefined}`}
-          >
-            <Center alignSelf={"center"}>{children}</Center>
-          </VStack>
-        </Stack>
-        <Footer />
-      </Stack>
+      <main className={ `main ${isWidthMinThan900 ? "margin-top-min" : "margin-top-max"}`}
+      
+      >{children}
+      </main>
+      <Footer/>
+      </div>
     </>
   );
 };

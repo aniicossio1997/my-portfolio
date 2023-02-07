@@ -53,9 +53,9 @@ const Card = ({ project }: Props) => {
   const btnTitle = t("btnTitleVisit");
 
   return (
-    <Box as={motion.div} variants={child2} initial="hidden" animate={"visible"}>
+    <Box as={motion.div} variants={child2} initial="hidden" animate={"visible"} >
       <Stack
-        h={{ base: "100%", md: "280px" }}
+        h={{ base: "100%", md: "315px" }}
         width={{ base: "320px", md: "600px", lg: "820px" }}
         direction={{ base: "column-reverse", md: "row" }}
         boxShadow="dark-lg"
