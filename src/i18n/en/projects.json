@@ -3,6 +3,13 @@
   "btnTitleCode": "Code",
   "projects": [
     {
+      "title": "Cripto Coin",
+      "description": "This project, it shows you a list of the 100 most popular cryptocurrencies, developed with Angular Cli and Bootstraps",
+      "img": "https://raw.githubusercontent.com/aniicossio1997/Angular-cripto/main/show.png",
+      "to": "https://angular-cripto.vercel.app/",
+      "repository": "https://github.com/aniicossio1997/Angular-cripto"
+    },
+    {
       "title": "Super hero",
       "description": "In this project you can have your own league of heroes, developed in Reactjs with redux",
       "img": "https://raw.githubusercontent.com/aniicossio1997/react-challenge/main/myTeam.png",
@@ -17,11 +24,18 @@
       "repository": "https://github.com/aniicossio1997/my-store"
     },
     {
-      "title": "Cripto Coin",
-      "description": "This project, it shows you a list of the 100 most popular cryptocurrencies, developed with Angular Cli and Bootstraps",
-      "img": "https://raw.githubusercontent.com/aniicossio1997/Angular-cripto/main/show.png",
-      "to": "https://angular-cripto.vercel.app/",
-      "repository": "https://github.com/aniicossio1997/Angular-cripto"
+      "title": "Calendar",
+      "description": "Fullstack project, the backend was developed in node with typescript, mongodb, JWT. The frontend was developed with React typescript, chakra ui, redux-toolkit",
+      "img": "https://raw.githubusercontent.com/aniicossio1997/calendar-fullstack/main/register.png",
+      "to": "#",
+      "repository": "https://github.com/aniicossio1997/calendar-fullstack"
+    },
+    {
+      "title": "Portafolio",
+      "description": "This project developed to show my works done. Developed in React, Typescript, react-router-dom, i18n languages ​​and chakra ui",
+      "img": "https://raw.githubusercontent.com/aniicossio1997/my-portfolio/main/show.png",
+      "to": "https://my-portfolio-theta-umber.vercel.app/",
+      "repository": "https://github.com/aniicossio1997/my-portfolios"
     }
   ]
 }

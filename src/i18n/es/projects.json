@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "title": "Cripto Coin",
+      "description": "En este proyecto te muestra un listado de las 100 criptomonedas más populares, desarrollado en Angular Cli y Bootstraps",
+      "img": "https://raw.githubusercontent.com/aniicossio1997/Angular-cripto/main/show.png",
+      "to": "https://angular-cripto.vercel.app/",
+      "repository": "https://github.com/aniicossio1997/Angular-cripto"
+    },
+    {
       "title": "Super hero",
       "description": "En este proyecto podras tener tu propia liga de heroes, desarrollado en Reactjs con redux",
       "img": "https://raw.githubusercontent.com/aniicossio1997/react-challenge/main/myTeam.png",
@@ -15,11 +22,18 @@
       "repository": "https://github.com/aniicossio1997/my-store"
     },
     {
-      "title": "Cripto Coin",
-      "description": "En este proyecto te muestra un listado de las 100 criptomonedas más populares, desarrollado en Angular Cli y Bootstraps",
-      "img": "https://raw.githubusercontent.com/aniicossio1997/Angular-cripto/main/show.png",
-      "to": "https://angular-cripto.vercel.app/",
-      "repository": "https://github.com/aniicossio1997/Angular-cripto"
+      "title": "Calendar",
+      "description": "Proyecto fullstack, el backend  fue desarrollado en node con typescript, mongodb,JWT. El frontend fue desarrollado con React typescript, chakra ui,redux-toolkit",
+      "img": "https://raw.githubusercontent.com/aniicossio1997/calendar-fullstack/main/register.png",
+      "to": "#",
+      "repository": "https://github.com/aniicossio1997/calendar-fullstack"
+    },
+    {
+      "title": "Portafolio",
+      "description": "En este proyecto desarrollado para mostrar mis trabajos realizados. Desarrollado en Rect, Typescript,react-router-dom, i18n languages y chakra ui",
+      "img": "https://raw.githubusercontent.com/aniicossio1997/my-portfolio/main/show.png",
+      "to": "https://my-portfolio-theta-umber.vercel.app/",
+      "repository": "https://github.com/aniicossio1997/my-portfolios"
     }
   ],
   "btnTitleVisit": "Visitar",
