@@ -13,6 +13,7 @@ const ProjectList = () => {
       {projects.map((data) => (
         <Card project={data} key={data.to} />
       ))}
+      
     </ContainerCenter>
   );
 };

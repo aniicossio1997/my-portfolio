@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "title": "APP Presupuesto",
+      "description": "En este proyecto te permite tener un presupuesto y en base a ese presupuesto tener gastos, desarrollado en Angular",
+      "img": "https://raw.githubusercontent.com/aniicossio1997/first-angular/main/app-presupuesto-observables/2_pantalla_lista_presupuesto.png",
+      "to": "https://precious-salamander-f08216.netlify.app",
+      "repository": "https://github.com/aniicossio1997/first-angular/tree/main/app-presupuesto-observables"
+    },
+    {
       "title": "Cripto Coin",
       "description": "En este proyecto te muestra un listado de las 100 criptomonedas más populares, desarrollado en Angular Cli y Bootstraps",
       "img": "https://raw.githubusercontent.com/aniicossio1997/Angular-cripto/main/show.png",

@@ -4,7 +4,7 @@ import { SocialMediaLinks } from "./SocialMediaLinks";
 
 const index = () => {
   return (
-    <Stack zIndex={"-1"}>
+    <Stack>
       <Box as="footer" role="contentinfo" paddingBottom={2}>
         <Center>
           <Stack
