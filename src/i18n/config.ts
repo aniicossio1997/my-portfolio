@@ -35,7 +35,7 @@ if (!Boolean(localStorage.getItem("localI18n"))) {
 }
 //se ejecuta antes
 if (!Boolean(localStorage.getItem("chakra-ui-color-mode"))) {
-  localStorage.setItem("chakra-ui-color-mode", "light");
+  localStorage.setItem("chakra-ui-color-mode", "dark");
 }
 export const resources = {
   en: en,

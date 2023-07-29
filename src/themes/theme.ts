@@ -3,7 +3,7 @@ import { mode } from "@chakra-ui/theme-tools";
 import "./../index.css";
 // 2. Add your color mode config
 const config = {
-  initialColorMode: localStorage.getItem("chakra-ui-color-mode") || "light",
+  initialColorMode: localStorage.getItem("chakra-ui-color-mode") || "dark",
   useSystemColorMode: false,
 };
 

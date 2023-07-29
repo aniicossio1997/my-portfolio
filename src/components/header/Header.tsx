@@ -27,8 +27,7 @@ const Header = () => {
       pos={"fixed"}
       width={"100%"}
       zIndex={{ base: 20, md: 30 }}
-      borderBottomColor={"gray.30"}
-      borderBottomWidth={1}
+
       bg={useColorModeValue("gray.100", "gray.600")}
       paddingX={{ base: undefined, md: 20 }}
       paddingBottom={{ base: undefined, md: 4 }}

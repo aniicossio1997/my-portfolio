@@ -1,7 +1,6 @@
 import { Suspense, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loading from "./components/common/loading/Loading";
-import { SpinnerGrid } from "./components/common/loading/SpinnerGrid";
 import Layout from "./layout/Layout";
 import { NotFound } from "./pages";
 import { basicRoutes } from "./routes/basicRoutes";
