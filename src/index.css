@@ -15,7 +15,37 @@ body {
 a{
   cursor: pointer !important;
 }
-header{
-  background-color: transparent !important;
 
+
+@media only screen and (min-width: 850px) {
+  header{
+    background-color: transparent !important;
+  
+  }
+    main,
+  .header {
+    box-sizing: border-box !important;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .css-nqggt2 {
+    grid-template-columns: 360px 1fr 1fr !important;
+  }
+}
+
+
+@media only screen and (max-width: 560px) {
+  .css-nqggt2 {
+    grid-template-columns: 460px 1fr 1fr !important;
+  }
+  .main {
+      min-height: 100%; 
+      text-align: center;
+      flex-wrap: wrap;
+  }
+  .css-gmuwbf {
+    display: inline !important;
+  }
 }

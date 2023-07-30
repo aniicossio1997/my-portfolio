@@ -4,6 +4,7 @@ import {
   Flex,
   useDisclosure,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import BtnModeSwitch from "./BtnModeSwitch";
@@ -13,30 +14,30 @@ import BtnTranslateMovil from "./BtnTranslateMovil";
 import { useTranslation } from "react-i18next";
 import Logo from "./Logo";
 import BtnTranslateDesktop from "./BtnTranslateDesktop";
+import { MenuResponsive } from "./MenuResponsive";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleToggle = () => (isOpen ? onClose() : onOpen());
   const colorValue = useColorModeValue("gray.80", undefined);
   const { t } = useTranslation(["home", "navbar"]);
+  const [isLargerThan] = useMediaQuery('(min-width: 850px)')
 
   return (
-    <Stack
+    <>
+    {
+      isLargerThan ? <>
+      <Stack
       as={"header"}
       padding={4}
       pos={"fixed"}
       width={"100%"}
-      zIndex={{ base: 20, md: 30 }}
-
-      bg={useColorModeValue("gray.100", "gray.600")}
-      paddingX={{ base: undefined, md: 20 }}
-      paddingBottom={{ base: undefined, md: 4 }}
+      zIndex={30}
+      paddingX={20}
+      paddingBottom={4}
     >
       <Stack direction={"row-reverse"}>
         <BtnModeSwitch />
-        <Box display={{ base: "flex", md: "none" }}>
-          <BtnTranslateMovil />
-        </Box>
       </Stack>
       <Flex
         as="nav"
@@ -55,7 +56,7 @@ const Header = () => {
           <Logo />
         </Flex>
 
-        <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
+        <Box display={{ base: "block", md: "none" }} onClick={handleToggle} cursor={"pointer"}>
           {!isOpen ? <HamburgerIcon /> : <CloseIcon />}
         </Box>
         <Stack
@@ -83,6 +84,14 @@ const Header = () => {
         </Stack>
       </Flex>
     </Stack>
+      
+      </> : <>
+      <h1> HOLA{ "is movil"} - {isLargerThan}</h1>
+      <MenuResponsive/>
+       </>
+    }
+   
+    </>
   );
 };
 

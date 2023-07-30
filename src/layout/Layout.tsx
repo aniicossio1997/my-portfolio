@@ -8,11 +8,9 @@ const Layout = ({ children }: any) => {
   return (
     <>
       <div>
-        <div className="header"></div>
           <Header />
-      <main className={ `main ${isWidthMinThan900 ? "margin-top-min" : "margin-top-max"}`}
-      
-      >{children}
+      <main className={ `main ${isWidthMinThan900 ? "margin-top-min" : "margin-top-max"}`}>
+        {children}
       </main>
       <Footer/>
       </div>
