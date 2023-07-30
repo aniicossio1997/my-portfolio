@@ -4,13 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
 body {
   font-family: 'Ubuntu Mono', monospace;
-
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  font-size: 14px;
 }
 a{
   cursor: pointer !important;
@@ -26,6 +21,17 @@ a{
   .header {
     box-sizing: border-box !important;
     padding: 20px;
+  }
+  .text-responsive{
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .text-responsive{
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.9%;
   }
 }
 

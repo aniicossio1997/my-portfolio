@@ -14,31 +14,11 @@ import { IProject } from "../../ts/interfaces/IProject";
 import { useTranslation } from "react-i18next";
 import { GoMarkGithub } from "react-icons/go";
 import { motion, Variants } from "framer-motion";
-import "./style.css"
+import "./style.css";
 interface Props {
   project: IProject;
 }
-const child: Variants = {
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 15,
-      stiffness: 200,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      type: "spring",
-      damping: 15,
-      stiffness: 200,
-      delay: 1,
-    },
-  },
-};
+
 const child2: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
@@ -51,9 +31,8 @@ const Card = ({ project }: Props) => {
   const { t } = useTranslation(["projects"]);
   const [isMinThan820] = useMediaQuery("(max-width: 820px)");
   const btnTitle = t("btnTitleVisit");
-
   return (
-    <Box as={motion.div} variants={child2} initial="hidden" animate={"visible"} >
+    <Box as={motion.div} variants={child2} initial="hidden" animate={"visible"}>
       <Stack
         h={{ base: "100%", md: "315px" }}
         width={{ base: "320px", md: "600px", lg: "820px" }}
@@ -80,7 +59,7 @@ const Card = ({ project }: Props) => {
           <Heading textStyle={"h2"} mb={4}>
             {project.title}
           </Heading>
-          <Text textStyle={"p"} align={"justify"}>
+          <Text textStyle={"p"} align={"justify"} className="text-responsive">
             {project.description}
           </Text>
 
@@ -88,9 +67,13 @@ const Card = ({ project }: Props) => {
             <BtnItem
               colorScheme={"pink"}
               href={project.to}
-              IconBtn={<ViewIcon height={6} width={6} 
-              className={`${project.to ==="#" ? "not-active" :" "}`}
-              />}
+              IconBtn={
+                <ViewIcon
+                  height={6}
+                  width={6}
+                  className={`${project.to === "#" ? "not-active" : " "}`}
+                />
+              }
             >
               {isMinThan820 ? (
                 <Icon as={ViewIcon} boxSize={"20px"} />

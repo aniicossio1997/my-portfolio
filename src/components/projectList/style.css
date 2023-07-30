@@ -3,3 +3,24 @@
   cursor: default;
   background-color: thistle;
 }
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  border-radius: 10px;
+  
+  box-shadow: inset 0px -1px 6px #cf77b8cc;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  color:#fbb6ce;
+  border:1px solid #fbb6ce;
+  transition: all 03.s;
+}
+
+.back-to-top:hover {
+
+  box-shadow: inset 0px -1px 6px pink;
+}

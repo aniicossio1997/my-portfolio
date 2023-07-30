@@ -1,28 +1,27 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, HeadingProps,Text, TextProps } from "@chakra-ui/react";
 import {  useNavigate } from "react-router-dom";
 
-interface Props {
+interface Props extends TextProps {
   title?: string;
 }
-export default function Logo({ title = "" }: Props) {
+export default function Logo({ title = "",...rest }: Props) {
   const navigate = useNavigate();
 
   const redirectHome=()=>{
     navigate('');
-
   }
+  
   return (
-    <Heading
+    <Text
       as="h1"
-      size="lg"
       letterSpacing={"tighter"}
       position="absolute"
-      fontSize={{ base: 26, md: 50 }}
       fontFamily={"initial"}
       cursor={"pointer"}
       onClick={redirectHome}
+      {...rest}
     >
       ❰AC❱
-    </Heading>
+    </Text>
   );
 }
