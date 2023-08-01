@@ -26,6 +26,9 @@ a{
     font-size: 0.8rem;
     line-height: 1.5;
   }
+  .box-contact{
+    width: 400px;
+  }
 }
 @media only screen and (max-width: 1000px) {
   .text-responsive{
@@ -33,19 +36,17 @@ a{
     line-height: 1.8 !important;
     letter-spacing: 0.9%;
   }
+  .box-contact{
+    width: 350px;
+  }
 }
 
-@media only screen and (max-width: 650px) {
-  .css-nqggt2 {
-    grid-template-columns: 360px 1fr 1fr !important;
-  }
+@media only screen and (max-width: 850px) {
+
 }
 
 
 @media only screen and (max-width: 560px) {
-  .css-nqggt2 {
-    grid-template-columns: 460px 1fr 1fr !important;
-  }
   .main {
       min-height: 100%; 
       text-align: center;
@@ -53,5 +54,8 @@ a{
   }
   .css-gmuwbf {
     display: inline !important;
+  }
+  .box-contact{
+    width: 250px;
   }
 }

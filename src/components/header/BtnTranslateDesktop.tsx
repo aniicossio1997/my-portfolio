@@ -3,6 +3,7 @@ import {
   Button,
   Menu,
   MenuButton,
+  MenuButtonProps,
   MenuDivider,
   MenuItem,
   MenuItemOption,
@@ -11,7 +12,12 @@ import {
 } from "@chakra-ui/react";
 import useTranslate from "../../hook/useTranslate";
 import "./style.css";
-const BtnTranslateDesktop = () => {
+
+interface IProps extends MenuButtonProps{
+
+}
+
+const BtnTranslateDesktop = ({...rest}:IProps) => {
   const { handleChanged } = useTranslate();
   const isActive = (title: string) => {
     return Boolean(localStorage.getItem("localI18n") === title);
@@ -25,7 +31,7 @@ const BtnTranslateDesktop = () => {
               isActive={isOpen}
               as={Button}
               rightIcon={<ChevronDownIcon />}
-              height={"35px"}
+              
               boxSizing="border-box"
               borderRadius={0}
               textTransform="uppercase"
@@ -34,6 +40,7 @@ const BtnTranslateDesktop = () => {
               fontSize={{ base: undefined, md: "1.2em" }}
               rounded={5}
               letterSpacing="1.2px"
+              {...rest}
             >
               {localStorage.getItem("localI18n") || ""}
             </MenuButton>

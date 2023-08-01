@@ -75,8 +75,8 @@ const Header = () => {
                     handleParentHideMenu={handleToggle}
                   />
                 ))}
-                <Box display={{ base: "none", md: "block" }} marginTop={5}>
-                  <BtnTranslateDesktop />
+                <Box  marginTop={5}>
+                  <BtnTranslateDesktop  height={'35px'}/>
                 </Box>
               </Stack>
             </Flex>

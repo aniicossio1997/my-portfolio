@@ -5,7 +5,7 @@ import { SocialMediaLinks } from "./SocialMediaLinks";
 const index = () => {
   return (
     <Stack>
-      <Box as="footer" role="contentinfo" paddingBottom={2}>
+      <Box as="footer" role="contentinfo" paddingBottom={2} marginTop={{base:"3rem",sm:undefined}}>
         <Center>
           <Stack
             direction={"column"}

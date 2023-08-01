@@ -18,12 +18,7 @@ import { InputText } from "./InputText";
 import useContacForm from "./useContacForm";
 import { ContactSchema, initialValues, Values } from "./validateForm";
 
-//index.ts, line 80
-interface RefObject<T> {
-  readonly current: T | null | undefined;
-}
-type STATUS_SEND = "pedding" | "filled" | "success" | "failed" | "none";
-type STATUS_FORM = "RESET" | "SEND";
+
 const FormContact = () => {
   const {
     isOpen: isVisible,
@@ -47,7 +42,7 @@ const FormContact = () => {
         }}
         validationSchema={ContactSchema}
       >
-        {({ handleReset, errors }) => (
+        {({ handleReset }) => (
           <Form noValidate ref={form}>
             {isLoading === "success" && (
               <Alert status="success">

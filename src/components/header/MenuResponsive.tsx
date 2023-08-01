@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   ButtonGroup,
   Drawer,
   DrawerBody,
@@ -9,46 +8,71 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
-  Icon,
   IconButton,
   List,
   ListIcon,
   ListItem,
-  Menu,
-  MenuDivider,
-  MenuItem,
-  MenuList,
-  Spacer,
   useDisclosure,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
 import Logo from "./Logo";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { basicRoutes } from "routes/basicRoutes";
+import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
+import BtnModeSwitch from "./BtnModeSwitch";
+import BtnTranslate from "./BtnTranslateMovil";
+import BtnTranslateDesktop from "./BtnTranslateDesktop";
+
+const styles: { [key: string]: React.CSSProperties } = {
+  btnList: {
+    backgroundColor: "rgba(26, 32, 44,0.6)",
+  },
+};
 
 export const MenuResponsive = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<HTMLButtonElement>(null);
+  const { t } = useTranslation(["home", "navbar"]);
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const [isLargerThan] = useMediaQuery('(min-width: 550px)')
+  const redirectLink = (url: string) => {
+    onClose();
+    navigate(url);
+  };
+
   return (
     <>
-      <div>
+      
         <Flex
           minWidth="max-content"
           alignItems="center"
           gap="2"
           boxSizing="border-box"
           justifyContent={"space-between"}
+          padding={"5px"}
         >
           <Box>
-            <Logo fontSize={{ base: 15, sm: 30, md: 40 }} position={"relative"} />
+            <Logo
+              fontSize={{ base: "1.9rem", md: "2.1rem" }}
+              position={"relative"}
+            />
           </Box>
           <ButtonGroup>
+          <BtnModeSwitch />
+            {
+              isLargerThan ? <BtnTranslateDesktop height={'40px'} /> :<BtnTranslate />
+            }
+            
             <IconButton
               aria-label="btn-show"
               ref={btnRef}
               icon={<HamburgerIcon width={30} height={30} />}
               onClick={onOpen}
               cursor="pointer"
-              variant='ghost'
+              variant="ghost"
             />
           </ButtonGroup>
         </Flex>
@@ -66,35 +90,41 @@ export const MenuResponsive = () => {
             maxHeight={"100vh"}
           >
             <DrawerCloseButton />
-            <DrawerHeader>
-              <Logo fontSize={{ base: 15, sm: 30 }} />
+            <DrawerHeader paddingBottom={6}>
+              <Logo
+                fontSize={{ base: "1.8rem", md: "1.9rem" }}
+                onClick={() => redirectLink("")}
+              />
             </DrawerHeader>
 
-            <DrawerBody paddingTop={10} boxSizing="border-box">
-           
-            <List display='flex' flexDirection='column' flexGrow={1} gap={1} spacing={3}>
-              <ListItem>
-                <ListIcon as={HamburgerIcon} color='green.500' />
-                Lorem ipsum dolor sit amet
-              </ListItem>
-              <ListItem>
-                <ListIcon as={HamburgerIcon} color='green.500' />
-                Assumenda
-              </ListItem>
-              <ListItem>
-                <ListIcon as={HamburgerIcon} color='green.500' />
-                Quidem
-              </ListItem>
-              {/* You can also use custom icons from react-icons */}
-              <ListItem>
-                <ListIcon as={HamburgerIcon} color='green.500' />
-                Quidem
-              </ListItem>
-            </List>
+            <DrawerBody paddingTop={"4rem"} boxSizing="border-box" paddingX={0}>
+              <List
+                display="flex"
+                flexDirection="column"
+                flexGrow={1}
+                gap={1}
+                spacing={3}
+              >
+                {basicRoutes.map((itemRouter) => (
+                  <ListItem
+                    key={itemRouter.path}
+                    fontSize="1.3rem"
+                    textTransform={"uppercase"}
+                    borderRadius={"10px"}
+                    padding="10px"
+                    paddingLeft={"15px"}
+                    style={pathname == itemRouter.to ? styles.btnList : {}}
+                    onClick={() => redirectLink(itemRouter.to)}
+                    cursor={"pointer"}
+                  >
+                    <ListIcon as={itemRouter.icon} />
+                    {t(`navbar:routeNames.${itemRouter.name}`)}
+                  </ListItem>
+                ))}
+              </List>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
-      </div>
     </>
   );
 };

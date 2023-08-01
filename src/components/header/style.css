@@ -2,6 +2,9 @@
  min-width: 90px !important;
 }
 .isActive{
-    background-color:rgb(190, 215, 239,.5) !important;
+    background-color:rgba(190, 215, 239,.5) !important;
+}
 
+.btn-link-responsive{
+    background-color: rgba(26, 32, 44,0.6);
 }

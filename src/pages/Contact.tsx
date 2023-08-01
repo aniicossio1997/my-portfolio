@@ -1,4 +1,4 @@
-import { Box, Center, Container, Heading } from "@chakra-ui/react";
+import { Box, Center, Container, Flex, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import FormContact from "../components/contactForm/FormContact";
@@ -10,30 +10,31 @@ export const Contact = () => {
 
   return (
     <>
-    <Container>
+   <Flex minWidth='full' justifyContent={"center"}  gap='2'>
     <Box
-        as={motion.div}
-        initial="hidden"
-        animate={"visible"}
-        variants={IAnimationDiv}
-        borderWidth="1px"
-        rounded="lg"
-        shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        maxWidth={{base:"90%",md:"500"}}
-        padding={4}
-      >
-        <Heading
-          as="h2"
-          textAlign={"center"}
-          alignSelf={"centers"}
-          alignItems={"center"}
-          marginBottom={5}
+          as={motion.div}
+          initial="hidden"
+          animate={"visible"}
+          variants={IAnimationDiv}
+          borderWidth="1px"
+          rounded="lg"
+          shadow="1px 1px 3px rgba(0,0,0,0.3)"
+          padding={4}
+          className={`box-contact`}
+        
         >
-          {t("title")}
-        </Heading>
-        <FormContact />
-      </Box>
-    </Container>
+          <Heading
+            as="h2"
+            textAlign={"center"}
+            alignSelf={"centers"}
+            alignItems={"center"}
+            marginBottom={5}
+          >
+            {t("title")}
+          </Heading>
+          <FormContact />
+        </Box>     
+    </Flex>
 
     </>
   );
