@@ -32,7 +32,6 @@ export const LayoutResponsive = ({children}:any) => {
         <main
           className={"margin-top-max" }
         >
-            <h3>estoy responsive</h3>
           {children}
         </main>
         <Footer />
