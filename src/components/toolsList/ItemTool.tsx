@@ -1,4 +1,4 @@
-import { Icon, Stack, Text } from "@chakra-ui/react";
+import { Icon, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { motion, Variants } from "framer-motion";
 import { ITool } from "../../ts/interfaces/ITool";
 const variantDiv: Variants = {
@@ -9,6 +9,7 @@ const variantDiv: Variants = {
   },
 };
 const ItemTool = ({ IconValue, name }: ITool) => {
+  const colorValue = useColorModeValue("gray.800", undefined);
   return (
     <Stack
       as={motion.div}
@@ -22,6 +23,7 @@ const ItemTool = ({ IconValue, name }: ITool) => {
       justifyContent={"center"}
       h={150}
       direction={"column"}
+      boxShadow="2xl"
     >
       <Icon
         as={IconValue}

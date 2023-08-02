@@ -27,7 +27,7 @@ export const GridHomeResponsive = () => {
           src={home1}
           alt="Image portafolio"
           w={"100%"}
-          h={{ base: "250px", md: "300px" }}
+          h={{ base: "250px", sm:"280px",md: "300px" }}
           objectFit="fill"
         />
       </Container>

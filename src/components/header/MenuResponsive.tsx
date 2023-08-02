@@ -12,6 +12,7 @@ import {
   List,
   ListIcon,
   ListItem,
+  useColorMode,
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
@@ -27,11 +28,18 @@ import BtnTranslateDesktop from "./BtnTranslateDesktop";
 
 const styles: { [key: string]: React.CSSProperties } = {
   btnList: {
-    backgroundColor: "rgba(26, 32, 44,0.6)",
+    backgroundColor: "var(--bg-link)",
+    color:'var(--text-link)'
   },
+  sidebarStyle:{
+    backgroundSize: "100% 100%",
+    backgroundPosition: "0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px",
+  },
+
 };
 
 export const MenuResponsive = () => {
+  const { colorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<HTMLButtonElement>(null);
   const { t } = useTranslation(["home", "navbar"]);
@@ -47,7 +55,8 @@ export const MenuResponsive = () => {
     <>
       
         <Flex
-          minWidth="max-content"
+          maxWidth={"full"}
+          minWidth="90%"
           alignItems="center"
           gap="2"
           boxSizing="border-box"
@@ -81,6 +90,7 @@ export const MenuResponsive = () => {
           placement="left"
           onClose={onClose}
           finalFocusRef={btnRef}
+          
         >
           <DrawerOverlay />
           <DrawerContent
@@ -88,6 +98,7 @@ export const MenuResponsive = () => {
             maxWidth="300px"
             overflowY="auto"
             maxHeight={"100vh"}
+            className={"sidebarCustom"}
           >
             <DrawerCloseButton />
             <DrawerHeader paddingBottom={6}>
@@ -114,6 +125,7 @@ export const MenuResponsive = () => {
                     padding="10px"
                     paddingLeft={"15px"}
                     style={pathname == itemRouter.to ? styles.btnList : {}}
+
                     onClick={() => redirectLink(itemRouter.to)}
                     cursor={"pointer"}
                   >

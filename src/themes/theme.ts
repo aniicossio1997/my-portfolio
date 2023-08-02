@@ -11,8 +11,6 @@ const config = {
 const themeConfig = extendTheme({
   config,
   fonts: {
-    heading: `'Ubuntu Mono', monospace`,
-    body: `'Raleway', sans-serif`,
   },
   colors: {
     primary: theme.colors.messenger,
@@ -26,8 +24,6 @@ const themeConfig = extendTheme({
     global: (props: any) => ({
       "html, body, #root": {
         color: mode("blackAlpha.700", "white")(props),
-        height: "100%",
-        fontFamily: `'Ubuntu Mono', monospace`,
       },
       "*::-webkit-scrollbar": {
         display: "none",
@@ -43,12 +39,6 @@ const themeConfig = extendTheme({
     Button: {
       baseStyle: {
         fontSize: ["12px", "18px", undefined],
-      },
-    },
-    Heading: {
-      //fontFamily: `'EB Garamond', "serif"`,
-      baseStyle: {
-        fontFamily: `'Ubuntu Mono', monospace`,
       },
     },
   },
@@ -78,6 +68,7 @@ const themeConfig = extendTheme({
       letterSpacing: "0.8%",
     },
   },
+
 });
 
 export default themeConfig;

@@ -34,13 +34,14 @@ export const LayoutResponsive = ({children}:any) => {
         >
           {children}
         </main>
-        <Footer />
-      </div>
-          {showButton && (
+        {showButton && (
         <button onClick={scrollToTop} className="back-to-top">
           &#8679; 
         </button>
       )}
+        <Footer />
+      </div>
+
     </>
   )
 }

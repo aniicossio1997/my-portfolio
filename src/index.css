@@ -1,61 +1,145 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Roboto:wght@400;500&display=swap');
+
 body {
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
+  padding: 0;
   font-size: 14px;
+  min-height: 100vh ;
 }
-a{
+a {
   cursor: pointer !important;
 }
 
+@media only screen and (max-width: 1000px) {
+  .text-responsive {
+    font-size: 0.9rem !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.9%;
+  }
+
+  .box-contact {
+    width: 350px;
+  }
+
+}
+
+
 
 @media only screen and (min-width: 850px) {
-  header{
+  header {
     background-color: transparent !important;
-  
+
   }
-    main,
+
+  main,
   .header {
     box-sizing: border-box !important;
     padding: 20px;
   }
-  .text-responsive{
+
+  .text-responsive {
     font-size: 0.8rem;
     line-height: 1.5;
+
   }
-  .box-contact{
+
+  .box-contact {
     width: 400px;
   }
-}
-@media only screen and (max-width: 1000px) {
-  .text-responsive{
-    font-size: 1rem !important;
-    line-height: 1.8 !important;
-    letter-spacing: 0.9%;
-  }
-  .box-contact{
-    width: 350px;
-  }
+
 }
 
 @media only screen and (max-width: 850px) {
-
+  body{
+    height: 100%;
+  }
 }
 
 
 @media only screen and (max-width: 560px) {
   .main {
-      min-height: 100%; 
-      text-align: center;
-      flex-wrap: wrap;
+    
+    text-align: center;
+    flex-wrap: wrap;
   }
+
   .css-gmuwbf {
     display: inline !important;
   }
-  .box-contact{
+
+  .box-contact {
     width: 250px;
   }
+}
+
+html[data-theme='light'] {
+
+
+  --text-500: #101010;
+  --text-300: #4c5654;
+  --bg-link:#D53F8C;
+  --text-link:#fff6f6;
+
+  --bg-sidebar: radial-gradient(18% 28% at 24% 50%, #FFF7F7FF 7%, #073AFF00 100%), radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%), radial-gradient(70% 53% at 36% 76%, #FFFFFFFF 0%, #073AFF00 100%), radial-gradient(42% 53% at 15% 94%, #FFFFFFF5 7%, #073AFF00 100%), radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%), radial-gradient(18% 28% at 35% 87%, #A28181FF 7%, #073AFF00 100%), radial-gradient(31% 43% at 7% 98%, #E11ABFFF 19%, #E11ABFFF 19%, #E11ABFFF 19%, #073AFF00 99%), radial-gradient(21% 37% at 72% 23%, #FFF7F7FF 24%, #073AFF00 100%), radial-gradient(35% 56% at 91% 74%, #F099FF80 0%, #073AFF00 100%), radial-gradient(74% 86% at 67% 38%, #FFFFFFF5 24%, #073AFF00 100%), linear-gradient(125deg, #FBFDFFFF 1%, #FFFAFCFF 100%);
+  --border-sidebar:1px solid #b9b6b6 !important;
+}
+
+html[data-theme='dark'] {
+
+
+  --text-500: #f2f1f1;
+  --text-300: #c9c9c9;
+  --bg-link:var(--chakra-colors-pink-300);
+  --text-link:#fff;
+  --bg-sidebar: linear-gradient(to right top, #192942, #26273e, #2e2539, #332333, #36232e) !important;
+  --border-sidebar:1px solid #060606 !important;
+}
+
+html[data-theme='dark'] body {
+  background-size: 100% 100%;
+  background-image: linear-gradient(to right top, #192942, #26273e, #2e2539, #332333, #36232e);
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+html[data-theme='light'] body {
+
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(18% 28% at 24% 50%, #FFF7F7FF 7%, #073AFF00 100%), radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%), radial-gradient(70% 53% at 36% 76%, #FFFFFFFF 0%, #073AFF00 100%), radial-gradient(42% 53% at 15% 94%, #FFFFFFF5 7%, #073AFF00 100%), radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%), radial-gradient(18% 28% at 35% 87%, #A28181FF 7%, #073AFF00 100%), radial-gradient(31% 43% at 7% 98%, #E11ABFFF 19%, #E11ABFFF 19%, #E11ABFFF 19%, #073AFF00 99%), radial-gradient(21% 37% at 72% 23%, #FFF7F7FF 24%, #073AFF00 100%), radial-gradient(35% 56% at 91% 74%, #F099FF80 0%, #073AFF00 100%), radial-gradient(74% 86% at 67% 38%, #FFFFFFF5 24%, #073AFF00 100%), linear-gradient(125deg, #FBFDFFFF 1%, #FFFAFCFF 100%);
+
+}
+
+html[data-theme='dark'] .sidebarCustom{
+  background-image: var(--bg-sidebar) !important;
+  border-right: var(--border-sidebar) !important;
+}
+
+.app::before {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  content: ' ';
+  pointer-events: none;
+  opacity: 0.3;
+  mix-blend-mode: darken;
+  background-image: radial-gradient(18% 28% at 24% 50%, #cefaffff 7%, #073aff00 100%),
+    radial-gradient(18% 28% at 18% 71%, #ffffff59 6%, #073aff00 100%), radial-gradient(70% 53% at 36% 76%, #73f2ffff 0%, #073aff00 100%),
+    radial-gradient(42% 53% at 15% 94%, #ffffffff 7%, #073aff00 100%), radial-gradient(70% 53% at 36% 76%, #73f2ffff 0%, #073aff00 100%)
+}
+
+
+
+div,
+p {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+DrawerContent{
+  background-size: 100% 100% !important;
+  background-image: linear-gradient(to right top, #192942, #26273e, #2e2539, #332333, #36232e) !important;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px !important;
+  border-right: 1px solid #060606 !important;
 }

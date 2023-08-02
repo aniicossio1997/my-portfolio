@@ -18,8 +18,8 @@ export const Contact = () => {
           variants={IAnimationDiv}
           borderWidth="1px"
           rounded="lg"
-          shadow="1px 1px 3px rgba(0,0,0,0.3)"
-          padding={4}
+          boxShadow="dark-lg"
+          padding={6}
           className={`box-contact`}
         
         >

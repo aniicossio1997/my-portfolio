@@ -4,6 +4,8 @@ import {
   AlertTitle,
   Box,
   Button,
+  Flex,
+  Spacer,
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -17,7 +19,6 @@ import { DataInputList } from "./DataInputList";
 import { InputText } from "./InputText";
 import useContacForm from "./useContacForm";
 import { ContactSchema, initialValues, Values } from "./validateForm";
-
 
 const FormContact = () => {
   const {
@@ -43,7 +44,7 @@ const FormContact = () => {
         validationSchema={ContactSchema}
       >
         {({ handleReset }) => (
-          <Form noValidate ref={form}>
+          <Form noValidate ref={form} >
             {isLoading === "success" && (
               <Alert status="success">
                 <AlertIcon />
@@ -62,28 +63,36 @@ const FormContact = () => {
               />
             ))}
 
-            <Stack direction={"column"} spacing={4} mt={5}>
-              <Button
-                colorScheme="pink"
-                variant="solid"
-                type={"submit"}
-                width={"fullWidth"}
-                fontSize={{ base: 18, md: 20 }}
-              >
-                {t("btn_title.send")}
-              </Button>
+            <Flex justifyContent={"space-between"}>
               <Button
                 colorScheme={"gray"}
                 borderWidth={1}
                 borderColor={"gray.300"}
                 variant="solid"
                 onClick={handleReset}
-                width={"fullWidth"}
-                fontSize={{ base: 17, md: 20 }}
+                width={{base:"60px",sm:'70px',md:'80px',lg:'100px'}}
+                fontSize={{ base: "0.8rem", sm:"1.2rem",md: 20 }}
+                rounded="lg"
               >
                 {t("btn_title.reset")}
               </Button>
-            </Stack>
+              <Button
+                backgroundColor={"var(--bg-link)"}
+                color={"var(--text-link)"}
+                variant="solid"
+                type={"submit"}
+                width={{base:"60px",sm:'70px',md:'80px',lg:'100px'}}
+                fontSize={{ base: "0.8rem",sm:"1.2rem", md: 20 }}
+                rounded="12px"
+                borderWidth={1}
+                borderColor={"whiteAlpha.400"}
+                _hover={{
+                  boxShadow:"dark-lg"
+                }}
+              >
+                {t("btn_title.send")}
+              </Button>
+            </Flex>
           </Form>
         )}
       </Formik>

@@ -35,7 +35,7 @@ const Card = ({ project }: Props) => {
     <Box as={motion.div} variants={child2} initial="hidden" animate={"visible"}>
       <Stack
         h={{ base: "100%", md: "315px" }}
-        width={{ base: "320px", md: "600px", lg: "820px" }}
+        width={{ base: "280px",sm:'310px', md: "600px", lg: "810px" }}
         direction={{ base: "column-reverse", md: "row" }}
         boxShadow="dark-lg"
         borderRadius={10}
@@ -56,7 +56,7 @@ const Card = ({ project }: Props) => {
           paddingX={{ base: undefined, md: 4 }}
           maxWidth={{ base: "70%", md: "60%" }}
         >
-          <Heading textStyle={"h2"} mb={4}>
+          <Heading textStyle={"h1"} mb={4} fontSize={{base:"1.2rem", md:"1.5rem", lg:"1.8rem"}}>
             {project.title}
           </Heading>
           <Text textStyle={"p"} align={"justify"} className="text-responsive">
