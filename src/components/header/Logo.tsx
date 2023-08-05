@@ -1,4 +1,4 @@
-import { Heading, HeadingProps,Text, TextProps } from "@chakra-ui/react";
+import { Text, TextProps } from "@chakra-ui/react";
 import {  useNavigate } from "react-router-dom";
 
 interface Props extends TextProps {

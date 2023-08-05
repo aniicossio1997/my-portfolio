@@ -2,9 +2,6 @@ import { ButtonProps } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import BtnAnimation from "../common/BtnAnimation";
 
-interface IProps {
-  rest: any | ButtonProps;
-}
 const BtnItem = ({ ...rest }: any | ButtonProps) => {
   return (
     <BtnAnimation

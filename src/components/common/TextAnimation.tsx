@@ -2,7 +2,7 @@ import React from "react";
 
 import { FC } from "react";
 import { motion, Variants, HTMLMotionProps } from "framer-motion";
-import { Heading, Text } from "@chakra-ui/react";
+
 
 const delay = 0;
 const duration = 0.09;

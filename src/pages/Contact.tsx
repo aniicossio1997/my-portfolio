@@ -1,9 +1,8 @@
-import { Box, Center, Container, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import FormContact from "../components/contactForm/FormContact";
 import { IAnimationDiv } from "../ts/interfaces/IAnimation";
-import ContainerCenter from "../components/common/ContainerCenter";
 
 export const Contact = () => {
   const { t } = useTranslation("contact");

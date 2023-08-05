@@ -4,11 +4,8 @@ import {
   Menu,
   MenuButton,
   MenuButtonProps,
-  MenuDivider,
   MenuItem,
-  MenuItemOption,
   MenuList,
-  MenuOptionGroup,
 } from "@chakra-ui/react";
 import useTranslate from "../../hook/useTranslate";
 import "./style.css";

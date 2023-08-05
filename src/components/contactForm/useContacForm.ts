@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { FormikState } from "formik";
 import { Values } from "./validateForm";
-import { DataKeyEmail } from "../../data/DataKeyEmail";
+import { checkEmptyAttributes, DataKeyEmail } from "../../data/DataKeyEmail";
 import { useState } from "react";
 
 type STATUS_SEND = "pedding" | "filled" | "success" | "failed" | "none";
@@ -15,13 +15,16 @@ const useContacForm = () => {
     resetForm: (nextState?: Partial<FormikState<Values>> | undefined) => void
   ) => {
     setIsLoading("pedding");
-
+    
+    if (!checkEmptyAttributes(DataKeyEmail)) {
+      setIsLoading("failed");
+    }
     emailjs
       .send(
         DataKeyEmail.service_id,
         DataKeyEmail.template_id,
         {
-          from_name: value.name,
+         
           message: value.message,
           from_email: value.email,
           subject: value.subject,
@@ -30,18 +33,15 @@ const useContacForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           resetForm();
           setIsLoading("success");
         },
         (error) => {
           setIsLoading("failed");
-          console.log(error.text);
         }
       )
       .catch((e) => {
         setIsLoading("failed");
-        console.log(e);
       });
   };
   return { sendEmail, isLoading };

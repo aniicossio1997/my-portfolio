@@ -6,8 +6,8 @@
     "message":"Message",
     "btn_send":"Send",
     "btn_reset" :"Reset",
-    "msj_error":"Your message was sent successfull!",
-    "btn_title":{
+    "msj_error":"We're sorry, an error occurred while processing the submission. Please try again later.",
+     "btn_title":{
         "reset":"Reset",
         "send":"Send"
     },

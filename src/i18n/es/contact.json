@@ -6,7 +6,6 @@
     "message":"Mensaje",
     "btn_send":"Enviar",
     "btn_reset" :"Limpiar",
-    "msj_error":"Tu mensaje se envio exitosamente!",
     "btn_title":{
         "reset":"Limpiar",
         "send":"Enviar"
@@ -23,6 +22,7 @@
         "max":"Es demasiado Largo!"
     },
     "msj_response":"Tu mensaje se envio exitosamente !",
-    "loading_title":"Enviando"
+    "loading_title":"Enviando",
+    "msj_error":"Lo sentimos ocurrio un error al procesar el envio, intente más tarde"
 
 }

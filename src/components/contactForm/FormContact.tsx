@@ -3,11 +3,10 @@ import {
   AlertIcon,
   AlertTitle,
   Box,
-  Button,
+  IconButton,
   Flex,
-  Spacer,
-  Stack,
-  useDisclosure,
+  Button,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
 import { Form, Formik, FormikHelpers } from "formik";
@@ -19,18 +18,14 @@ import { DataInputList } from "./DataInputList";
 import { InputText } from "./InputText";
 import useContacForm from "./useContacForm";
 import { ContactSchema, initialValues, Values } from "./validateForm";
-
+import { AiOutlineClear, AiOutlineSend } from "react-icons/ai";
+import { BtnIconCustom } from "./BtnCustom";
 const FormContact = () => {
-  const {
-    isOpen: isVisible,
-    onClose,
-    onOpen,
-  } = useDisclosure({ defaultIsOpen: true });
   emailjs.init(DataKeyEmail.user_id);
   const form = useRef<any>(""); // MutableRefObject<null>
   const { sendEmail, isLoading } = useContacForm();
   const { t } = useTranslation("contact");
-
+  const [isLargerThan] = useMediaQuery("(min-width: 850px)");
   return (
     <>
       {isLoading === "pedding" && (
@@ -44,12 +39,20 @@ const FormContact = () => {
         validationSchema={ContactSchema}
       >
         {({ handleReset }) => (
-          <Form noValidate ref={form} >
+          <Form noValidate ref={form}>
             {isLoading === "success" && (
               <Alert status="success">
                 <AlertIcon />
                 <Box>
                   <AlertTitle>{t("msj_response")}</AlertTitle>
+                </Box>
+              </Alert>
+            )}
+            {isLoading === "failed" && (
+              <Alert status="error">
+                <AlertIcon />
+                <Box>
+                  <AlertTitle>{t("msj_error")}</AlertTitle>
                 </Box>
               </Alert>
             )}
@@ -64,34 +67,24 @@ const FormContact = () => {
             ))}
 
             <Flex justifyContent={"space-between"}>
-              <Button
+              <BtnIconCustom
                 colorScheme={"gray"}
-                borderWidth={1}
                 borderColor={"gray.300"}
-                variant="solid"
                 onClick={handleReset}
-                width={{base:"60px",sm:'70px',md:'80px',lg:'100px'}}
-                fontSize={{ base: "0.8rem", sm:"1.2rem",md: 20 }}
-                rounded="lg"
-              >
-                {t("btn_title.reset")}
-              </Button>
-              <Button
+                icon={<AiOutlineClear />}
+                aria-label={t("btn_title.reset")}
+              />
+              <BtnIconCustom
+                aria-label={t("btn_title.send")}
                 backgroundColor={"var(--bg-link)"}
                 color={"var(--text-link)"}
-                variant="solid"
                 type={"submit"}
-                width={{base:"60px",sm:'70px',md:'80px',lg:'100px'}}
-                fontSize={{ base: "0.8rem",sm:"1.2rem", md: 20 }}
-                rounded="12px"
-                borderWidth={1}
                 borderColor={"whiteAlpha.400"}
                 _hover={{
-                  boxShadow:"dark-lg"
+                  boxShadow: "dark-lg",
                 }}
-              >
-                {t("btn_title.send")}
-              </Button>
+                icon={<AiOutlineSend />}
+              />
             </Flex>
           </Form>
         )}

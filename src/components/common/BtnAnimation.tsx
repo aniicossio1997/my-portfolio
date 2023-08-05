@@ -1,9 +1,7 @@
-import { Button, Icon, ButtonProps } from "@chakra-ui/react";
+import { Button, ButtonProps } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React, { createContext, useState } from "react";
 import { IBtnAnimationContextProps } from "../../ts/interfaces/IBtn";
-type JSXComponent = () => JSX.Element;
-type IconButtonProps = React.ComponentProps<typeof Icon>;
 
 export const BtnAnimationContext = createContext(
   {} as IBtnAnimationContextProps

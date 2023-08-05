@@ -16,12 +16,6 @@ export const DataInputList: IDataInput[] = [
     Component: Input,
   },
   {
-    label: "name",
-    name: "name",
-    type: "text",
-    Component: Input,
-  },
-  {
     label: "message",
     name: "message",
     type: "textarea",
