@@ -20,7 +20,7 @@ const Header = () => {
   const handleToggle = () => (isOpen ? onClose() : onOpen());
   const colorValue = useColorModeValue("gray.80", undefined);
   const { t } = useTranslation(["home", "navbar"]);
-  const [isLargerThan] = useMediaQuery('(min-width: 850px)')
+  const [isLargerThan] = useMediaQuery('(min-width: 860px)')
 
   return (
     <>
@@ -48,7 +48,7 @@ const Header = () => {
                 mr={4}
                 display="block"
                 position="relative"
-                top={-10}
+                top={"-4.5rem"}
                 left={0}
               >
                 <Logo fontSize={{ base: 26,sm:30, md: 50 }} />
