@@ -30,7 +30,7 @@ const child2: Variants = {
 const Card = ({ project }: Props) => {
   const { t } = useTranslation(["projects"]);
   const [isMinThan820] = useMediaQuery("(max-width: 820px)");
-  const btnTitle = t("btnTitleVisit");
+  //const btnTitle = t("btnTitleVisit");
   return (
     <Box as={motion.div} variants={child2} initial="hidden" animate={"visible"}>
       <Stack

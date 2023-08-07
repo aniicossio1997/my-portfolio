@@ -64,7 +64,7 @@ const themeConfig = extendTheme({
       letterSpacing: "-1%",
     },
     p: {
-      fontSize: ["12px", "18px", "20px"],
+      fontSize: ["11.5px", "15px", "18px"],
       letterSpacing: "0.8%",
     },
   },

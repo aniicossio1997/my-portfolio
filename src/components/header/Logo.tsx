@@ -19,9 +19,10 @@ export default function Logo({ title = "",...rest }: Props) {
       fontFamily={"initial"}
       cursor={"pointer"}
       onClick={redirectHome}
+      className="txt-title"
       {...rest}
     >
-      ❰AC❱
+      AC
     </Text>
   );
 }
